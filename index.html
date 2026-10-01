@@ -1,0 +1,3648 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="সরস - কৃষকের ফ্রেশ পণ্য">
+
+<title>সরস - কৃষকের ফ্রেশ পণ্য</title>
+
+
+<!-- Google Font -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+:root{
+
+    --green:#198754;
+    --dark-green:#116530;
+    --light-green:#eaf7ed;
+
+    --yellow:#ffc107;
+    --orange:#ff9800;
+
+    --red:#dc3545;
+
+    --dark:#222;
+    --gray:#666;
+
+    --light:#f5f8f5;
+
+    --white:#ffffff;
+
+    --border:#e5e5e5;
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Hind Siliguri',sans-serif;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:var(--light);
+
+    color:var(--dark);
+
+    line-height:1.6;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:#fff;
+
+    box-shadow:
+    0 2px 12px rgba(0,0,0,.08);
+
+}
+
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:10px 18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.brand-logo{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid var(--green);
+
+}
+
+
+.logo-area h1{
+
+    color:var(--green);
+
+    font-size:27px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   RIGHT HEADER
+===================================================== */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+/* =====================================================
+   LANGUAGE SWITCHER
+===================================================== */
+
+.language-switcher{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#f1f5f1;
+
+    border:1px solid #dce5dc;
+
+    border-radius:25px;
+
+    padding:3px;
+
+}
+
+
+.language-switcher button{
+
+    border:none;
+
+    background:transparent;
+
+    color:#555;
+
+    padding:6px 11px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+
+.language-switcher button.active{
+
+    background:var(--green);
+
+    color:#fff;
+
+}
+
+
+/* =====================================================
+   CART BUTTON
+===================================================== */
+
+.cart-btn{
+
+    border:none;
+
+    background:var(--green);
+
+    color:#fff;
+
+    padding:10px 17px;
+
+    border-radius:25px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    transition:.2s;
+
+}
+
+
+.cart-btn:hover{
+
+    background:var(--dark-green);
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:370px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    background:
+
+    linear-gradient(
+        rgba(18,101,48,.78),
+        rgba(18,101,48,.78)
+    ),
+
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1400&q=85");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.hero-content{
+
+    max-width:750px;
+
+    color:#fff;
+
+}
+
+
+.hero h2{
+
+    font-size:42px;
+
+    line-height:1.25;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+
+.hero p{
+
+    font-size:19px;
+
+    margin-bottom:24px;
+
+}
+
+
+.hero-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:var(--yellow);
+
+    color:#222;
+
+    padding:11px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.2s;
+
+}
+
+
+.hero-btn:hover{
+
+    background:#ffca2c;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =====================================================
+   TRUST SECTION
+===================================================== */
+
+.trust-section{
+
+    max-width:1100px;
+
+    margin:-35px auto 35px;
+
+    padding:0 15px;
+
+    position:relative;
+
+}
+
+
+.trust-grid{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+}
+
+
+.trust-item{
+
+    text-align:center;
+
+    padding:20px 10px;
+
+    border-right:1px solid #eee;
+
+}
+
+
+.trust-item:last-child{
+
+    border-right:none;
+
+}
+
+
+.trust-item i{
+
+    color:var(--green);
+
+    font-size:26px;
+
+    margin-bottom:5px;
+
+}
+
+
+.trust-item strong{
+
+    display:block;
+
+    font-size:16px;
+
+}
+
+
+.trust-item span{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+    0 18px 40px;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    color:var(--dark-green);
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-top:-18px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.product-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.07);
+
+    transition:.25s;
+
+}
+
+
+.product-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.12);
+
+}
+
+
+.product-img-box{
+
+    height:220px;
+
+    background:#f8f8f8;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.product-img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.3s;
+
+}
+
+
+.product-card:hover
+.product-img{
+
+    transform:scale(1.04);
+
+}
+
+
+.product-badge{
+
+    position:absolute;
+
+    top:10px;
+
+    left:10px;
+
+    background:var(--green);
+
+    color:#fff;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    z-index:2;
+
+}
+
+
+.product-info{
+
+    padding:16px;
+
+}
+
+
+.product-title{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+
+}
+
+
+.product-description{
+
+    color:#777;
+
+    font-size:13px;
+
+    min-height:22px;
+
+}
+
+
+.product-bottom{
+
+    margin-top:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+}
+
+
+.product-price{
+
+    color:var(--green);
+
+    font-size:21px;
+
+    font-weight:700;
+
+}
+
+
+.price-unit{
+
+    color:#777;
+
+    font-size:11px;
+
+    font-weight:400;
+
+}
+
+
+.add-to-cart{
+
+    border:none;
+
+    background:var(--yellow);
+
+    color:#222;
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.2s;
+
+}
+
+
+.add-to-cart:hover{
+
+    background:var(--orange);
+
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.overlay{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.45);
+
+    z-index:1999;
+
+}
+
+
+.overlay.show{
+
+    display:block;
+
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart-modal{
+
+    position:fixed;
+
+    top:0;
+
+    right:-430px;
+
+    width:390px;
+
+    max-width:94%;
+
+    height:100vh;
+
+    background:#fff;
+
+    z-index:2000;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:
+    -5px 0 25px rgba(0,0,0,.15);
+
+    transition:.3s ease;
+
+}
+
+
+.cart-modal.open{
+
+    right:0;
+
+}
+
+
+.cart-header{
+
+    background:var(--green);
+
+    color:#fff;
+
+    padding:17px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.cart-header h3{
+
+    font-size:20px;
+
+}
+
+
+.close-cart{
+
+    border:none;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+.cart-items{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:18px;
+
+}
+
+
+.empty-cart{
+
+    text-align:center;
+
+    color:#777;
+
+    padding:50px 15px;
+
+}
+
+
+.empty-cart i{
+
+    color:#ccc;
+
+    font-size:45px;
+
+    margin-bottom:12px;
+
+}
+
+
+.cart-item{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+.cart-item-info{
+
+    flex:1;
+
+}
+
+
+.cart-item-info h4{
+
+    font-size:15px;
+
+}
+
+
+.cart-item-price{
+
+    color:var(--green);
+
+    font-weight:600;
+
+}
+
+
+.quantity-control{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:7px;
+
+}
+
+
+.quantity-control button{
+
+    width:27px;
+
+    height:27px;
+
+    border:1px solid #ddd;
+
+    background:#f7f7f7;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+.quantity-control span{
+
+    min-width:20px;
+
+    text-align:center;
+
+}
+
+
+.remove-item{
+
+    border:none;
+
+    background:none;
+
+    color:var(--red);
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+.cart-footer{
+
+    padding:18px;
+
+    background:#fafafa;
+
+    border-top:1px solid #eee;
+
+}
+
+
+.summary-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:6px;
+
+}
+
+
+.total-row{
+
+    border-top:1px dashed #ccc;
+
+    padding-top:10px;
+
+    margin-top:10px;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:var(--dark-green);
+
+}
+
+
+.checkout-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:var(--green);
+
+    color:#fff;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-top:12px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+
+.checkout-btn:hover{
+
+    background:var(--dark-green);
+
+}
+
+
+/* =====================================================
+   CHECKOUT MODAL
+===================================================== */
+
+.checkout-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.6);
+
+    z-index:3000;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px;
+
+}
+
+
+.checkout-modal.show{
+
+    display:flex;
+
+}
+
+
+.checkout-box{
+
+    width:100%;
+
+    max-width:450px;
+
+    max-height:92vh;
+
+    overflow-y:auto;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    position:relative;
+
+}
+
+
+.checkout-close{
+
+    position:absolute;
+
+    right:15px;
+
+    top:8px;
+
+    border:none;
+
+    background:none;
+
+    color:#777;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+.checkout-box h3{
+
+    color:var(--dark-green);
+
+    font-size:23px;
+
+    margin-bottom:18px;
+
+}
+
+
+.form-group{
+
+    margin-bottom:13px;
+
+}
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    font-weight:600;
+
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    border:1px solid #ccc;
+
+    border-radius:7px;
+
+    padding:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    border-color:var(--green);
+
+}
+
+
+.form-group textarea{
+
+    min-height:85px;
+
+    resize:vertical;
+
+}
+
+
+.delivery-note{
+
+    background:var(--light-green);
+
+    padding:10px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    margin-bottom:12px;
+
+}
+
+
+.confirm-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#25D366;
+
+    color:#fff;
+
+    padding:13px;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+
+.cancel-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#eee;
+
+    color:#555;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    margin-top:7px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#123d19;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:
+    28px 15px 85px;
+
+    margin-top:20px;
+
+}
+
+
+.footer-logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+
+}
+
+
+.footer-contact{
+
+    margin-top:8px;
+
+    color:#d8eadb;
+
+}
+
+
+/* =====================================================
+   MOBILE CART BAR
+===================================================== */
+
+.mobile-cart-bar{
+
+    display:none;
+
+    position:fixed;
+
+    left:12px;
+
+    right:12px;
+
+    bottom:12px;
+
+    z-index:1500;
+
+}
+
+
+.mobile-cart-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:var(--dark-green);
+
+    color:#fff;
+
+    padding:13px 18px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.25);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:900px){
+
+    .product-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .trust-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .trust-item:nth-child(2){
+
+        border-right:none;
+
+    }
+
+
+    .trust-item:nth-child(-n+2){
+
+        border-bottom:
+        1px solid #eee;
+
+    }
+
+
+    .hero h2{
+
+        font-size:34px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:
+        8px 10px;
+
+    }
+
+
+    .brand-logo{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+    .logo-area h1{
+
+        font-size:23px;
+
+    }
+
+
+    .nav-actions{
+
+        gap:5px;
+
+    }
+
+
+    .language-switcher button{
+
+        padding:
+        5px 8px;
+
+        font-size:11px;
+
+    }
+
+
+    .cart-btn{
+
+        padding:
+        8px 10px;
+
+        font-size:13px;
+
+    }
+
+
+    .cart-btn i{
+
+        font-size:12px;
+
+    }
+
+
+    .hero{
+
+        min-height:320px;
+
+        padding:
+        40px 18px;
+
+    }
+
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+
+    .container{
+
+        padding:
+        0 12px 35px;
+
+    }
+
+
+    .section-title{
+
+        font-size:26px;
+
+    }
+
+
+    .product-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+
+    .product-img-box{
+
+        height:155px;
+
+    }
+
+
+    .product-info{
+
+        padding:11px;
+
+    }
+
+
+    .product-title{
+
+        font-size:16px;
+
+    }
+
+
+    .product-description{
+
+        font-size:11px;
+
+    }
+
+
+    .product-bottom{
+
+        display:block;
+
+    }
+
+
+    .product-price{
+
+        font-size:18px;
+
+        margin-bottom:8px;
+
+    }
+
+
+    .add-to-cart{
+
+        width:100%;
+
+        font-size:13px;
+
+        padding:8px 5px;
+
+    }
+
+
+    .trust-section{
+
+        margin-top:-25px;
+
+    }
+
+
+    .trust-item{
+
+        padding:
+        15px 5px;
+
+    }
+
+
+    .trust-item i{
+
+        font-size:21px;
+
+    }
+
+
+    .trust-item strong{
+
+        font-size:14px;
+
+    }
+
+
+    .trust-item span{
+
+        font-size:11px;
+
+    }
+
+
+    .mobile-cart-bar{
+
+        display:block;
+
+    }
+
+
+    footer{
+
+        padding-bottom:90px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="navbar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <img src="logo.jpeg"
+             alt="সরস Logo"
+             class="brand-logo">
+
+        <h1>সরস</h1>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="nav-actions">
+
+
+        <!-- LANGUAGE -->
+
+        <div class="language-switcher">
+
+            <button
+                id="bn-btn"
+                class="active"
+                onclick="setLanguage('bn')">
+
+                বাংলা
+
+            </button>
+
+
+            <button
+                id="en-btn"
+                onclick="setLanguage('en')">
+
+                English
+
+            </button>
+
+        </div>
+
+
+        <!-- CART -->
+
+        <button
+            class="cart-btn"
+            onclick="toggleCart()">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span data-i18n="cart">
+                কার্ট
+            </span>
+
+            (<span id="cart-count">0</span>)
+
+        </button>
+
+    </div>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+
+    <h2 data-i18n="heroTitle">
+
+        কৃষকের ফ্রেশ পণ্য
+
+    </h2>
+
+
+    <p data-i18n="heroText">
+
+        সরাসরি খামার ও কৃষকের কাছ থেকে সংগৃহীত
+        তাজা ও মানসম্মত পণ্য।
+
+    </p>
+
+
+    <a href="#products"
+       class="hero-btn">
+
+        <i class="fa-solid fa-basket-shopping"></i>
+
+        <span data-i18n="orderNow">
+
+            এখনই অর্ডার করুন
+
+        </span>
+
+    </a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRUST
+===================================================== -->
+
+<section class="trust-section">
+
+<div class="trust-grid">
+
+
+    <div class="trust-item">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <strong data-i18n="fresh">
+            ফ্রেশ পণ্য
+        </strong>
+
+        <span data-i18n="freshSub">
+            তাজা ও মানসম্মত
+        </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <i class="fa-solid fa-tractor"></i>
+
+        <strong data-i18n="farmer">
+            কৃষকের কাছ থেকে
+        </strong>
+
+        <span data-i18n="farmerSub">
+            সরাসরি সংগ্রহ
+        </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <strong data-i18n="fastDelivery">
+            দ্রুত ডেলিভারি
+        </strong>
+
+        <span data-i18n="fastDeliverySub">
+            আপনার ঠিকানায়
+        </span>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <i class="fa-solid fa-money-bill-wave"></i>
+
+        <strong data-i18n="cod">
+            Cash on Delivery
+        </strong>
+
+        <span data-i18n="codSub">
+            পণ্য হাতে পেয়ে পেমেন্ট
+        </span>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<main
+    class="container"
+    id="products">
+
+
+    <h2
+        class="section-title"
+        data-i18n="productsTitle">
+
+        আমাদের পণ্যসমূহ
+
+    </h2>
+
+
+    <p
+        class="section-subtitle"
+        data-i18n="productsSub">
+
+        আপনার প্রয়োজনের ফ্রেশ পণ্য বেছে নিন
+
+    </p>
+
+
+    <div
+        class="product-grid"
+        id="product-grid">
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     CART OVERLAY
+===================================================== -->
+
+<div
+    class="overlay"
+    id="cartOverlay"
+    onclick="toggleCart()">
+
+</div>
+
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<div
+    class="cart-modal"
+    id="cartModal">
+
+
+    <div class="cart-header">
+
+        <h3>
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span data-i18n="yourCart">
+                আপনার কার্ট
+            </span>
+
+        </h3>
+
+
+        <button
+            class="close-cart"
+            onclick="toggleCart()">
+
+            ×
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cart-items">
+
+    </div>
+
+
+    <div class="cart-footer">
+
+
+        <div class="summary-row">
+
+            <span data-i18n="productPrice">
+                পণ্যের মূল্য
+            </span>
+
+            <strong>
+                ৳ <span id="cart-subtotal">0</span>
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span data-i18n="delivery">
+                ডেলিভারি
+            </span>
+
+            <strong>
+                ৳ <span id="cart-delivery">0</span>
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row total-row">
+
+            <span data-i18n="grandTotal">
+                সর্বমোট
+            </span>
+
+            <strong>
+                ৳ <span id="cart-total">0</span>
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-btn"
+            onclick="openCheckout()">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <span data-i18n="confirmOrder">
+
+                অর্ডার কনফার্ম করুন
+
+            </span>
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CHECKOUT MODAL
+===================================================== -->
+
+<div
+    class="checkout-modal"
+    id="checkoutModal">
+
+
+    <div class="checkout-box">
+
+
+        <button
+            class="checkout-close"
+            onclick="closeCheckout()">
+
+            ×
+
+        </button>
+
+
+        <h3>
+
+            <i class="fa-solid fa-file-invoice"></i>
+
+            <span data-i18n="orderInfo">
+
+                অর্ডারের তথ্য
+
+            </span>
+
+        </h3>
+
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+            <label data-i18n="name">
+
+                আপনার নাম *
+
+            </label>
+
+
+            <input
+                type="text"
+                id="customer-name"
+                data-placeholder="namePlaceholder"
+                placeholder="আপনার নাম লিখুন">
+
+        </div>
+
+
+
+        <!-- PHONE -->
+
+        <div class="form-group">
+
+            <label data-i18n="phone">
+
+                মোবাইল নম্বর *
+
+            </label>
+
+
+            <input
+                type="tel"
+                id="customer-phone"
+                data-placeholder="phonePlaceholder"
+                placeholder="01XXXXXXXXX">
+
+        </div>
+
+
+
+        <!-- DELIVERY AREA -->
+
+        <div class="form-group">
+
+            <label data-i18n="area">
+
+                ডেলিভারি এলাকা *
+
+            </label>
+
+
+            <select
+                id="delivery-area"
+                onchange="updateCart()">
+
+                <option
+                    value="dhaka"
+                    data-i18n="insideDhaka">
+
+                    ঢাকার ভিতরে — ৳60
+
+                </option>
+
+
+                <option
+                    value="outside"
+                    data-i18n="outsideDhaka">
+
+                    ঢাকার বাইরে — ৳120
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- ADDRESS -->
+
+        <div class="form-group">
+
+            <label data-i18n="address">
+
+                সম্পূর্ণ ঠিকানা *
+
+            </label>
+
+
+            <textarea
+                id="customer-address"
+                data-placeholder="addressPlaceholder"
+                placeholder="বাড়ি/ফ্ল্যাট, রোড, এলাকা ইত্যাদি লিখুন">
+
+            </textarea>
+
+        </div>
+
+
+
+        <!-- NOTE -->
+
+        <div class="delivery-note">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <span data-i18n="deliveryNote">
+
+                ডেলিভারি চার্জ এলাকা অনুযায়ী যুক্ত হবে।
+                অর্ডার WhatsApp-এর মাধ্যমে নিশ্চিত করা হবে।
+
+            </span>
+
+        </div>
+
+
+
+        <!-- TOTAL -->
+
+        <div class="summary-row total-row">
+
+            <span data-i18n="grandTotal">
+
+                সর্বমোট
+
+            </span>
+
+
+            <strong>
+
+                ৳ <span id="checkout-total">0</span>
+
+            </strong>
+
+        </div>
+
+
+
+        <!-- WHATSAPP -->
+
+        <button
+            class="confirm-btn"
+            onclick="submitOrder()">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            <span data-i18n="whatsappOrder">
+
+                WhatsApp-এ অর্ডার পাঠান
+
+            </span>
+
+        </button>
+
+
+
+        <!-- CANCEL -->
+
+        <button
+            class="cancel-btn"
+            onclick="closeCheckout()"
+            data-i18n="cancel">
+
+            বাতিল করুন
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        সরস
+
+    </div>
+
+
+    <p data-i18n="footerText">
+
+        কৃষকের ফ্রেশ পণ্য আপনার দোরগোড়ায়।
+
+    </p>
+
+
+    <div class="footer-contact">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <span data-i18n="whatsapp">
+
+            WhatsApp:
+
+        </span>
+
+        <strong>
+
+            01336530525
+
+        </strong>
+
+    </div>
+
+
+    <p
+        style="
+        margin-top:10px;
+        font-size:13px;
+        color:#b8d5bd;
+        "
+        data-i18n="copyright">
+
+        © ২০২৬ সরস - সর্বস্বত্ব সংরক্ষিত
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     MOBILE CART
+===================================================== -->
+
+<div class="mobile-cart-bar">
+
+
+    <button
+        class="mobile-cart-btn"
+        onclick="toggleCart()">
+
+
+        <span>
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span data-i18n="cartItems">
+
+                কার্টে
+
+            </span>
+
+            <span id="mobile-count">
+                0
+            </span>
+
+            <span data-i18n="items">
+
+                টি পণ্য
+
+            </span>
+
+        </span>
+
+
+        <span>
+
+            ৳ <span id="mobile-total">
+                0
+            </span>
+
+        </span>
+
+
+    </button>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   LANGUAGE DATA
+===================================================== */
+
+const translations = {
+
+    bn: {
+
+        cart:"কার্ট",
+
+        heroTitle:
+        "কৃষকের ফ্রেশ পণ্য",
+
+        heroText:
+        "সরাসরি খামার ও কৃষকের কাছ থেকে সংগৃহীত তাজা ও মানসম্মত পণ্য।",
+
+        orderNow:
+        "এখনই অর্ডার করুন",
+
+
+        fresh:
+        "ফ্রেশ পণ্য",
+
+        freshSub:
+        "তাজা ও মানসম্মত",
+
+
+        farmer:
+        "কৃষকের কাছ থেকে",
+
+        farmerSub:
+        "সরাসরি সংগ্রহ",
+
+
+        fastDelivery:
+        "দ্রুত ডেলিভারি",
+
+        fastDeliverySub:
+        "আপনার ঠিকানায়",
+
+
+        cod:
+        "Cash on Delivery",
+
+        codSub:
+        "পণ্য হাতে পেয়ে পেমেন্ট",
+
+
+        productsTitle:
+        "আমাদের পণ্যসমূহ",
+
+        productsSub:
+        "আপনার প্রয়োজনের ফ্রেশ পণ্য বেছে নিন",
+
+
+        yourCart:
+        "আপনার কার্ট",
+
+        productPrice:
+        "পণ্যের মূল্য",
+
+        delivery:
+        "ডেলিভারি",
+
+        grandTotal:
+        "সর্বমোট",
+
+        confirmOrder:
+        "অর্ডার কনফার্ম করুন",
+
+
+        orderInfo:
+        "অর্ডারের তথ্য",
+
+        name:
+        "আপনার নাম *",
+
+        phone:
+        "মোবাইল নম্বর *",
+
+        area:
+        "ডেলিভারি এলাকা *",
+
+        address:
+        "সম্পূর্ণ ঠিকানা *",
+
+
+        namePlaceholder:
+        "আপনার নাম লিখুন",
+
+        phonePlaceholder:
+        "01XXXXXXXXX",
+
+        addressPlaceholder:
+        "বাড়ি/ফ্ল্যাট, রোড, এলাকা ইত্যাদি লিখুন",
+
+
+        insideDhaka:
+        "ঢাকার ভিতরে — ৳60",
+
+        outsideDhaka:
+        "ঢাকার বাইরে — ৳120",
+
+
+        deliveryNote:
+        "ডেলিভারি চার্জ এলাকা অনুযায়ী যুক্ত হবে। অর্ডার WhatsApp-এর মাধ্যমে নিশ্চিত করা হবে।",
+
+
+        whatsappOrder:
+        "WhatsApp-এ অর্ডার পাঠান",
+
+        cancel:
+        "বাতিল করুন",
+
+
+        footerText:
+        "কৃষকের ফ্রেশ পণ্য আপনার দোরগোড়ায়।",
+
+        whatsapp:
+        "WhatsApp:",
+
+        copyright:
+        "© ২০২৬ সরস - সর্বস্বত্ব সংরক্ষিত",
+
+
+        cartItems:
+        "কার্টে",
+
+        items:
+        "টি পণ্য",
+
+
+        freshBadge:
+        "ফ্রেশ",
+
+        addCart:
+        "যোগ করুন",
+
+        unit:
+        "/ প্যাক/ইউনিট",
+
+
+        emptyCart:
+        "আপনার কার্ট খালি রয়েছে।",
+
+
+        alertEmpty:
+        "আপনার কার্ট খালি!",
+
+        alertForm:
+        "দয়া করে নাম, মোবাইল নম্বর ও সম্পূর্ণ ঠিকানা দিন।",
+
+        alertPhone:
+        "সঠিক মোবাইল নম্বর দিন।",
+
+
+        orderTitle:
+        "সরস - নতুন অর্ডার",
+
+        orderName:
+        "নাম",
+
+        orderPhone:
+        "মোবাইল",
+
+        orderDelivery:
+        "ডেলিভারি",
+
+        orderAddress:
+        "ঠিকানা",
+
+        orderProducts:
+        "পণ্যের তালিকা",
+
+        orderSubtotal:
+        "পণ্যের মূল্য",
+
+        orderDeliveryCharge:
+        "ডেলিভারি চার্জ",
+
+        orderTotal:
+        "সর্বমোট",
+
+        inside:
+        "ঢাকার ভিতরে",
+
+        outside:
+        "ঢাকার বাইরে",
+
+        thanks:
+        "ধন্যবাদ ❤️\nসরস - কৃষকের ফ্রেশ পণ্য"
+
+    },
+
+
+    en: {
+
+        cart:
+        "Cart",
+
+        heroTitle:
+        "Fresh Products from Farmers",
+
+        heroText:
+        "Fresh and quality products collected directly from farms and farmers.",
+
+        orderNow:
+        "Order Now",
+
+
+        fresh:
+        "Fresh Products",
+
+        freshSub:
+        "Fresh & Quality",
+
+
+        farmer:
+        "From Farmers",
+
+        farmerSub:
+        "Directly Sourced",
+
+
+        fastDelivery:
+        "Fast Delivery",
+
+        fastDeliverySub:
+        "To Your Door",
+
+
+        cod:
+        "Cash on Delivery",
+
+        codSub:
+        "Pay After Delivery",
+
+
+        productsTitle:
+        "Our Products",
+
+        productsSub:
+        "Choose fresh products for your needs",
+
+
+        yourCart:
+        "Your Cart",
+
+        productPrice:
+        "Product Price",
+
+        delivery:
+        "Delivery",
+
+        grandTotal:
+        "Grand Total",
+
+        confirmOrder:
+        "Confirm Order",
+
+
+        orderInfo:
+        "Order Information",
+
+        name:
+        "Your Name *",
+
+        phone:
+        "Mobile Number *",
+
+        area:
+        "Delivery Area *",
+
+        address:
+        "Full Address *",
+
+
+        namePlaceholder:
+        "Enter your name",
+
+        phonePlaceholder:
+        "01XXXXXXXXX",
+
+        addressPlaceholder:
+        "House/Flat, Road, Area etc.",
+
+
+        insideDhaka:
+        "Inside Dhaka — ৳60",
+
+        outsideDhaka:
+        "Outside Dhaka — ৳120",
+
+
+        deliveryNote:
+        "Delivery charge will be added according to your area. Your order will be confirmed through WhatsApp.",
+
+
+        whatsappOrder:
+        "Send Order via WhatsApp",
+
+        cancel:
+        "Cancel",
+
+
+        footerText:
+        "Fresh products from farmers, delivered to your doorstep.",
+
+        whatsapp:
+        "WhatsApp:",
+
+        copyright:
+        "© 2026 Soros - All Rights Reserved",
+
+
+        cartItems:
+        "Cart",
+
+        items:
+        "items",
+
+
+        freshBadge:
+        "Fresh",
+
+        addCart:
+        "Add to Cart",
+
+        unit:
+        "/ pack/unit",
+
+
+        emptyCart:
+        "Your cart is empty.",
+
+
+        alertEmpty:
+        "Your cart is empty!",
+
+        alertForm:
+        "Please enter your name, mobile number and full address.",
+
+        alertPhone:
+        "Please enter a valid mobile number.",
+
+
+        orderTitle:
+        "Soros - New Order",
+
+        orderName:
+        "Name",
+
+        orderPhone:
+        "Mobile",
+
+        orderDelivery:
+        "Delivery",
+
+        orderAddress:
+        "Address",
+
+        orderProducts:
+        "Product List",
+
+        orderSubtotal:
+        "Product Price",
+
+        orderDeliveryCharge:
+        "Delivery Charge",
+
+        orderTotal:
+        "Grand Total",
+
+        inside:
+        "Inside Dhaka",
+
+        outside:
+        "Outside Dhaka",
+
+        thanks:
+        "Thank you ❤️\nSoros - Fresh Products from Farmers"
+
+    }
+
+};
+
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+const products = [
+
+    {
+        id:1,
+
+        nameBn:
+        "ব্রাউন সুগার",
+
+        nameEn:
+        "Brown Sugar",
+
+        price:150,
+
+        img:
+        "01.jpg",
+
+        descBn:
+        "খাঁটি ও মানসম্মত ব্রাউন সুগার",
+
+        descEn:
+        "Pure and quality brown sugar"
+    },
+
+
+    {
+        id:2,
+
+        nameBn:
+        "খাঁটি গরুর দুধ",
+
+        nameEn:
+        "Pure Cow Milk",
+
+        price:120,
+
+        img:
+        "004.jpg",
+
+        descBn:
+        "তাজা খাঁটি গরুর দুধ",
+
+        descEn:
+        "Fresh pure cow milk"
+    },
+
+
+    {
+        id:3,
+
+        nameBn:
+        "দেশি মুরগির ডিম",
+
+        nameEn:
+        "Local Chicken Eggs",
+
+        price:70,
+
+        img:
+        "02.png",
+
+        descBn:
+        "দেশি মুরগির ফ্রেশ ডিম",
+
+        descEn:
+        "Fresh local chicken eggs"
+    },
+
+
+    {
+        id:4,
+
+        nameBn:
+        "দেশি মুরগি",
+
+        nameEn:
+        "Local Chicken",
+
+        price:650,
+
+        img:
+        "03.jpeg",
+
+        descBn:
+        "ফ্রেশ দেশি মুরগি",
+
+        descEn:
+        "Fresh local chicken"
+    }
+
+];
+
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+let cart = [];
+
+
+
+/* =====================================================
+   CURRENT LANGUAGE
+===================================================== */
+
+let currentLanguage =
+    localStorage.getItem("sorosLanguage") || "bn";
+
+
+
+/* =====================================================
+   TRANSLATION FUNCTION
+===================================================== */
+
+function t(key){
+
+    return translations[currentLanguage][key] || key;
+
+}
+
+
+
+/* =====================================================
+   PRODUCT NAME
+===================================================== */
+
+function getProductName(product){
+
+    if(currentLanguage === "en"){
+
+        return product.nameEn;
+
+    }
+
+    return product.nameBn;
+
+}
+
+
+
+/* =====================================================
+   PRODUCT DESCRIPTION
+===================================================== */
+
+function getProductDescription(product){
+
+    if(currentLanguage === "en"){
+
+        return product.descEn;
+
+    }
+
+    return product.descBn;
+
+}
+
+
+
+/* =====================================================
+   LANGUAGE SWITCH
+===================================================== */
+
+function setLanguage(language){
+
+    currentLanguage = language;
+
+
+    /* Save language */
+
+    localStorage.setItem(
+        "sorosLanguage",
+        language
+    );
+
+
+    /* HTML language */
+
+    document.documentElement.lang =
+        language === "bn"
+        ? "bn"
+        : "en";
+
+
+    /* Active button */
+
+    document
+        .getElementById("bn-btn")
+        .classList
+        .toggle(
+            "active",
+            language === "bn"
+        );
+
+
+    document
+        .getElementById("en-btn")
+        .classList
+        .toggle(
+            "active",
+            language === "en"
+        );
+
+
+    /* Translate elements */
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(function(element){
+
+            const key =
+                element.getAttribute(
+                    "data-i18n"
+                );
+
+
+            if(translations[language][key]){
+
+                element.textContent =
+                    translations[language][key];
+
+            }
+
+        });
+
+
+    /* Translate placeholders */
+
+    document
+        .querySelectorAll("[data-placeholder]")
+        .forEach(function(element){
+
+            const key =
+                element.getAttribute(
+                    "data-placeholder"
+                );
+
+
+            if(translations[language][key]){
+
+                element.placeholder =
+                    translations[language][key];
+
+            }
+
+        });
+
+
+    /* Translate select options */
+
+    document
+        .querySelectorAll(
+            "#delivery-area option[data-i18n]"
+        )
+        .forEach(function(option){
+
+            const key =
+                option.getAttribute(
+                    "data-i18n"
+                );
+
+
+            option.textContent =
+                translations[language][key];
+
+        });
+
+
+    /* Page title */
+
+    document.title =
+        language === "bn"
+        ? "সরস - কৃষকের ফ্রেশ পণ্য"
+        : "Soros - Fresh Products from Farmers";
+
+
+    /* Reload products */
+
+    loadProducts();
+
+
+    /* Update cart */
+
+    updateCart();
+
+}
+
+
+
+/* =====================================================
+   LOAD PRODUCTS
+===================================================== */
+
+function loadProducts(){
+
+    const grid =
+        document.getElementById(
+            "product-grid"
+        );
+
+
+    grid.innerHTML =
+        products.map(function(product){
+
+            const name =
+                getProductName(product);
+
+            const description =
+                getProductDescription(product);
+
+
+            return `
+
+                <div class="product-card">
+
+                    <div class="product-img-box">
+
+                        <span class="product-badge">
+
+                            ${t("freshBadge")}
+
+                        </span>
+
+
+                        <img
+                            src="${product.img}"
+                            alt="${name}"
+                            class="product-img"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+
+                        <div class="product-title">
+
+                            ${name}
+
+                        </div>
+
+
+                        <div class="product-description">
+
+                            ${description}
+
+                        </div>
+
+
+                        <div class="product-bottom">
+
+
+                            <div class="product-price">
+
+                                ৳ ${product.price}
+
+                                <span class="price-unit">
+
+                                    ${t("unit")}
+
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="add-to-cart"
+                                onclick="addToCart(${product.id})">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                ${t("addCart")}
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+}
+
+
+
+/* =====================================================
+   DELIVERY CHARGE
+===================================================== */
+
+function getDeliveryCharge(){
+
+    const area =
+        document.getElementById(
+            "delivery-area"
+        );
+
+
+    if(!area){
+
+        return 60;
+
+    }
+
+
+    return area.value === "outside"
+        ? 120
+        : 60;
+
+}
+
+
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+function addToCart(productId){
+
+    const product =
+        products.find(function(item){
+
+            return item.id === productId;
+
+        });
+
+
+    if(!product){
+
+        return;
+
+    }
+
+
+    const existing =
+        cart.find(function(item){
+
+            return item.id === productId;
+
+        });
+
+
+    if(existing){
+
+        existing.quantity += 1;
+
+    }
+
+    else{
+
+        cart.push({
+
+            ...product,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    updateCart();
+
+}
+
+
+
+/* =====================================================
+   CHANGE QUANTITY
+===================================================== */
+
+function changeQuantity(
+    productId,
+    change
+){
+
+    const item =
+        cart.find(function(product){
+
+            return product.id === productId;
+
+        });
+
+
+    if(!item){
+
+        return;
+
+    }
+
+
+    item.quantity += change;
+
+
+    if(item.quantity <= 0){
+
+        cart =
+            cart.filter(function(product){
+
+                return product.id !== productId;
+
+            });
+
+    }
+
+
+    updateCart();
+
+}
+
+
+
+/* =====================================================
+   REMOVE PRODUCT
+===================================================== */
+
+function removeFromCart(productId){
+
+    cart =
+        cart.filter(function(item){
+
+            return item.id !== productId;
+
+        });
+
+
+    updateCart();
+
+}
+
+
+
+/* =====================================================
+   UPDATE CART
+===================================================== */
+
+function updateCart(){
+
+    const cartItems =
+        document.getElementById(
+            "cart-items"
+        );
+
+
+    let count = 0;
+
+    let subtotal = 0;
+
+
+    cart.forEach(function(item){
+
+        count += item.quantity;
+
+        subtotal +=
+            item.price * item.quantity;
+
+    });
+
+
+    /* Empty cart */
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = `
+
+            <div class="empty-cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <p>
+
+                    ${t("emptyCart")}
+
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+    else{
+
+        cartItems.innerHTML =
+            cart.map(function(item){
+
+                return `
+
+                    <div class="cart-item">
+
+
+                        <div class="cart-item-info">
+
+
+                            <h4>
+
+                                ${getProductName(item)}
+
+                            </h4>
+
+
+                            <div class="cart-item-price">
+
+                                ৳ ${item.price}
+                                ×
+                                ${item.quantity}
+
+                            </div>
+
+
+                            <div class="quantity-control">
+
+
+                                <button
+                                    onclick="changeQuantity(${item.id}, -1)">
+
+                                    −
+
+                                </button>
+
+
+                                <span>
+
+                                    ${item.quantity}
+
+                                </span>
+
+
+                                <button
+                                    onclick="changeQuantity(${item.id}, 1)">
+
+                                    +
+
+                                </button>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <button
+                            class="remove-item"
+                            onclick="removeFromCart(${item.id})">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+
+                    </div>
+
+                `;
+
+            }).join("");
+
+    }
+
+
+    /* Delivery */
+
+    const delivery =
+        cart.length > 0
+        ? getDeliveryCharge()
+        : 0;
+
+
+    /* Total */
+
+    const total =
+        subtotal + delivery;
+
+
+    /* Update UI */
+
+    document.getElementById(
+        "cart-count"
+    ).textContent = count;
+
+
+    document.getElementById(
+        "mobile-count"
+    ).textContent = count;
+
+
+    document.getElementById(
+        "cart-subtotal"
+    ).textContent = subtotal;
+
+
+    document.getElementById(
+        "cart-delivery"
+    ).textContent = delivery;
+
+
+    document.getElementById(
+        "cart-total"
+    ).textContent = total;
+
+
+    document.getElementById(
+        "mobile-total"
+    ).textContent = total;
+
+
+    document.getElementById(
+        "checkout-total"
+    ).textContent = total;
+
+}
+
+
+
+/* =====================================================
+   OPEN / CLOSE CART
+===================================================== */
+
+function toggleCart(){
+
+    const cartModal =
+        document.getElementById(
+            "cartModal"
+        );
+
+
+    const overlay =
+        document.getElementById(
+            "cartOverlay"
+        );
+
+
+    cartModal.classList.toggle(
+        "open"
+    );
+
+
+    overlay.classList.toggle(
+        "show"
+    );
+
+}
+
+
+
+/* =====================================================
+   OPEN CHECKOUT
+===================================================== */
+
+function openCheckout(){
+
+    if(cart.length === 0){
+
+        alert(
+            t("alertEmpty")
+        );
+
+        return;
+
+    }
+
+
+    document
+        .getElementById(
+            "checkoutModal"
+        )
+        .classList
+        .add("show");
+
+
+    updateCart();
+
+}
+
+
+
+/* =====================================================
+   CLOSE CHECKOUT
+===================================================== */
+
+function closeCheckout(){
+
+    document
+        .getElementById(
+            "checkoutModal"
+        )
+        .classList
+        .remove("show");
+
+}
+
+
+
+/* =====================================================
+   SUBMIT WHATSAPP ORDER
+===================================================== */
+
+function submitOrder(){
+
+    const name =
+        document
+        .getElementById(
+            "customer-name"
+        )
+        .value
+        .trim();
+
+
+    const phone =
+        document
+        .getElementById(
+            "customer-phone"
+        )
+        .value
+        .trim();
+
+
+    const address =
+        document
+        .getElementById(
+            "customer-address"
+        )
+        .value
+        .trim();
+
+
+    const area =
+        document
+        .getElementById(
+            "delivery-area"
+        )
+        .value;
+
+
+    /* Validation */
+
+    if(
+        !name ||
+        !phone ||
+        !address
+    ){
+
+        alert(
+            t("alertForm")
+        );
+
+        return;
+
+    }
+
+
+    /* Phone validation */
+
+    const cleanPhone =
+        phone.replace(
+            /\D/g,
+            ""
+        );
+
+
+    if(cleanPhone.length < 10){
+
+        alert(
+            t("alertPhone")
+        );
+
+        return;
+
+    }
+
+
+    /* Product list */
+
+    let subtotal = 0;
+
+    let productText = "";
+
+
+    cart.forEach(function(item){
+
+        const itemTotal =
+            item.price *
+            item.quantity;
+
+
+        subtotal += itemTotal;
+
+
+        productText +=
+
+            `• ${getProductName(item)} — ${item.quantity} x ৳${item.price} = ৳${itemTotal}\n`;
+
+    });
+
+
+    /* Delivery */
+
+    const delivery =
+        area === "outside"
+        ? 120
+        : 60;
+
+
+    const areaText =
+        area === "outside"
+        ? t("outside")
+        : t("inside");
+
+
+    /* Grand total */
+
+    const total =
+        subtotal + delivery;
+
+
+    /* WhatsApp message */
+
+    const message =
+
+`🌿 *${t("orderTitle")}* 🌿
+
+👤 *${t("orderName")}:* ${name}
+
+📱 *${t("orderPhone")}:* ${phone}
+
+📍 *${t("orderDelivery")}:* ${areaText}
+
+🏠 *${t("orderAddress")}:*
+${address}
+
+🛒 *${t("orderProducts")}:*
+
+${productText}
+
+━━━━━━━━━━━━━━
+
+🧾 *${t("orderSubtotal")}:* ৳${subtotal}
+
+🚚 *${t("orderDeliveryCharge")}:* ৳${delivery}
+
+💰 *${t("orderTotal")}:* ৳${total}
+
+━━━━━━━━━━━━━━
+
+${t("thanks")}`;
+
+
+    /* WhatsApp number */
+
+    const whatsappNumber =
+        "8801336530525";
+
+
+    /* WhatsApp URL */
+
+    const whatsappURL =
+        "https://wa.me/"
+        + whatsappNumber
+        + "?text="
+        + encodeURIComponent(
+            message
+        );
+
+
+    /* Open WhatsApp */
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+
+/* =====================================================
+   CLOSE CHECKOUT WHEN CLICK OUTSIDE
+===================================================== */
+
+document
+    .getElementById(
+        "checkoutModal"
+    )
+    .addEventListener(
+        "click",
+        function(event){
+
+            if(
+                event.target === this
+            ){
+
+                closeCheckout();
+
+            }
+
+        }
+    );
+
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+setLanguage(
+    currentLanguage
+);
+
+</script>
+
+
+</body>
+
+</html>
+```
