@@ -1,3648 +1,1771 @@
-```html
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-      content="সরস - কৃষকের ফ্রেশ পণ্য">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>সরস - কৃষকের ফ্রেশ পণ্য</title>
 
-
-<!-- Google Font -->
-
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
-
-
-<!-- Font Awesome -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
-/* =====================================================
-   BASIC
-===================================================== */
-
-:root{
-
-    --green:#198754;
-    --dark-green:#116530;
-    --light-green:#eaf7ed;
-
-    --yellow:#ffc107;
-    --orange:#ff9800;
-
-    --red:#dc3545;
-
-    --dark:#222;
-    --gray:#666;
-
-    --light:#f5f8f5;
-
-    --white:#ffffff;
-
-    --border:#e5e5e5;
-}
-
-
 *{
-
     margin:0;
     padding:0;
-
     box-sizing:border-box;
-
     font-family:'Hind Siliguri',sans-serif;
-
 }
-
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
 
 body{
-
-    background:var(--light);
-
-    color:var(--dark);
-
-    line-height:1.6;
-
+    background:#f4f8f4;
+    color:#222;
 }
-
-
-/* =====================================================
-   HEADER
-===================================================== */
 
 header{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
     background:#fff;
-
-    box-shadow:
-    0 2px 12px rgba(0,0,0,.08);
-
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
-
 
 .navbar{
-
     max-width:1200px;
-
     margin:auto;
-
     padding:10px 18px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
 }
-
 
 .logo-area{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
 }
 
-
-.brand-logo{
-
+.logo-area img{
     width:48px;
-
     height:48px;
-
     border-radius:50%;
-
     object-fit:cover;
-
-    border:2px solid var(--green);
-
+    border:2px solid #198754;
 }
-
 
 .logo-area h1{
-
-    color:var(--green);
-
+    color:#198754;
     font-size:27px;
-
-    font-weight:700;
-
 }
 
-
-/* =====================================================
-   RIGHT HEADER
-===================================================== */
-
-.nav-actions{
-
+.nav-right{
     display:flex;
-
     align-items:center;
-
-    gap:10px;
-
+    gap:8px;
 }
 
-
-/* =====================================================
-   LANGUAGE SWITCHER
-===================================================== */
-
-.language-switcher{
-
+.lang{
     display:flex;
-
-    align-items:center;
-
-    background:#f1f5f1;
-
-    border:1px solid #dce5dc;
-
-    border-radius:25px;
-
-    padding:3px;
-
-}
-
-
-.language-switcher button{
-
-    border:none;
-
-    background:transparent;
-
-    color:#555;
-
-    padding:6px 11px;
-
+    background:#eee;
     border-radius:20px;
+    padding:3px;
+}
 
+.lang button{
+    border:0;
+    background:transparent;
+    padding:6px 10px;
+    border-radius:18px;
     cursor:pointer;
-
-    font-size:13px;
-
-    font-weight:600;
-
-    transition:.2s;
-
+    font-weight:bold;
 }
 
-
-.language-switcher button.active{
-
-    background:var(--green);
-
-    color:#fff;
-
+.lang button.active{
+    background:#198754;
+    color:white;
 }
-
-
-/* =====================================================
-   CART BUTTON
-===================================================== */
 
 .cart-btn{
-
-    border:none;
-
-    background:var(--green);
-
-    color:#fff;
-
-    padding:10px 17px;
-
-    border-radius:25px;
-
-    font-size:16px;
-
+    border:0;
+    background:#198754;
+    color:white;
+    padding:9px 14px;
+    border-radius:22px;
     cursor:pointer;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    transition:.2s;
-
+    font-size:15px;
 }
-
-
-.cart-btn:hover{
-
-    background:var(--dark-green);
-
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
 
 .hero{
-
-    min-height:370px;
-
+    min-height:360px;
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
+    align-items:center;
     text-align:center;
-
-    padding:50px 20px;
+    color:white;
+    padding:40px 20px;
 
     background:
-
     linear-gradient(
-        rgba(18,101,48,.78),
-        rgba(18,101,48,.78)
+        rgba(25,135,84,.82),
+        rgba(25,135,84,.82)
     ),
-
     url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1400&q=85");
 
     background-size:cover;
-
     background-position:center;
-
 }
-
-
-.hero-content{
-
-    max-width:750px;
-
-    color:#fff;
-
-}
-
 
 .hero h2{
-
     font-size:42px;
-
-    line-height:1.25;
-
-    margin-bottom:10px;
-
-    font-weight:700;
-
 }
-
 
 .hero p{
-
-    font-size:19px;
-
-    margin-bottom:24px;
-
+    font-size:18px;
+    max-width:700px;
+    margin:10px auto 22px;
 }
 
-
-.hero-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    background:var(--yellow);
-
-    color:#222;
-
-    padding:11px 25px;
-
-    border-radius:30px;
-
+.hero a{
+    display:inline-block;
     text-decoration:none;
-
-    font-size:17px;
-
-    font-weight:700;
-
-    transition:.2s;
-
+    background:#ffc107;
+    color:#222;
+    padding:11px 24px;
+    border-radius:25px;
+    font-weight:bold;
 }
-
-
-.hero-btn:hover{
-
-    background:#ffca2c;
-
-    transform:translateY(-2px);
-
-}
-
-
-/* =====================================================
-   TRUST SECTION
-===================================================== */
-
-.trust-section{
-
-    max-width:1100px;
-
-    margin:-35px auto 35px;
-
-    padding:0 15px;
-
-    position:relative;
-
-}
-
-
-.trust-grid{
-
-    background:#fff;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.08);
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-}
-
-
-.trust-item{
-
-    text-align:center;
-
-    padding:20px 10px;
-
-    border-right:1px solid #eee;
-
-}
-
-
-.trust-item:last-child{
-
-    border-right:none;
-
-}
-
-
-.trust-item i{
-
-    color:var(--green);
-
-    font-size:26px;
-
-    margin-bottom:5px;
-
-}
-
-
-.trust-item strong{
-
-    display:block;
-
-    font-size:16px;
-
-}
-
-
-.trust-item span{
-
-    color:var(--gray);
-
-    font-size:13px;
-
-}
-
-
-/* =====================================================
-   MAIN
-===================================================== */
 
 .container{
-
     max-width:1200px;
-
     margin:auto;
-
-    padding:
-    0 18px 40px;
-
+    padding:35px 18px 50px;
 }
-
 
 .section-title{
-
     text-align:center;
-
-    color:var(--dark-green);
-
+    color:#116530;
     font-size:30px;
-
-    margin-bottom:25px;
-
 }
 
-
-.section-subtitle{
-
+.section-sub{
     text-align:center;
-
     color:#777;
-
-    margin-top:-18px;
-
-    margin-bottom:30px;
-
+    margin:5px 0 28px;
 }
 
-
-/* =====================================================
-   PRODUCTS
-===================================================== */
-
-.product-grid{
-
+.products{
     display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
-
 }
 
-
-.product-card{
-
-    background:#fff;
-
-    border-radius:15px;
-
+.product{
+    background:white;
+    border-radius:14px;
     overflow:hidden;
-
-    box-shadow:
-    0 4px 15px rgba(0,0,0,.07);
-
-    transition:.25s;
-
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.2s;
 }
 
-
-.product-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 8px 25px rgba(0,0,0,.12);
-
+.product:hover{
+    transform:translateY(-4px);
 }
 
-
-.product-img-box{
-
+.product-image{
     height:220px;
-
-    background:#f8f8f8;
-
     position:relative;
-
-    overflow:hidden;
-
+    background:#eee;
 }
 
-
-.product-img{
-
+.product-image img{
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
-    transition:.3s;
-
 }
 
-
-.product-card:hover
-.product-img{
-
-    transform:scale(1.04);
-
-}
-
-
-.product-badge{
-
+.badge{
     position:absolute;
-
     top:10px;
-
     left:10px;
-
-    background:var(--green);
-
-    color:#fff;
-
-    padding:4px 10px;
-
+    background:#198754;
+    color:white;
+    padding:3px 10px;
     border-radius:20px;
-
     font-size:12px;
-
-    font-weight:600;
-
-    z-index:2;
-
 }
-
 
 .product-info{
-
-    padding:16px;
-
+    padding:15px;
 }
 
-
-.product-title{
-
+.product-name{
     font-size:19px;
-
-    font-weight:700;
-
-    margin-bottom:4px;
-
+    font-weight:bold;
 }
 
-
-.product-description{
-
+.product-desc{
     color:#777;
-
     font-size:13px;
-
     min-height:22px;
-
 }
-
 
 .product-bottom{
-
     margin-top:12px;
-
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
+    align-items:center;
     gap:8px;
-
 }
 
-
-.product-price{
-
-    color:var(--green);
-
-    font-size:21px;
-
-    font-weight:700;
-
+.price{
+    color:#198754;
+    font-size:20px;
+    font-weight:bold;
 }
 
-
-.price-unit{
-
-    color:#777;
-
-    font-size:11px;
-
-    font-weight:400;
-
-}
-
-
-.add-to-cart{
-
-    border:none;
-
-    background:var(--yellow);
-
-    color:#222;
-
-    padding:9px 13px;
-
-    border-radius:8px;
-
+.add{
+    border:0;
+    background:#ffc107;
+    padding:8px 12px;
+    border-radius:7px;
     cursor:pointer;
-
-    font-weight:700;
-
-    transition:.2s;
-
+    font-weight:bold;
 }
-
-
-.add-to-cart:hover{
-
-    background:var(--orange);
-
-}
-
-
-/* =====================================================
-   OVERLAY
-===================================================== */
 
 .overlay{
-
     display:none;
-
     position:fixed;
-
     inset:0;
-
-    background:
-    rgba(0,0,0,.45);
-
+    background:rgba(0,0,0,.5);
     z-index:1999;
-
 }
-
 
 .overlay.show{
-
     display:block;
-
 }
 
-
-/* =====================================================
-   CART
-===================================================== */
-
-.cart-modal{
-
+.cart{
     position:fixed;
-
     top:0;
-
-    right:-430px;
-
+    right:-420px;
     width:390px;
-
     max-width:94%;
-
     height:100vh;
-
-    background:#fff;
-
+    background:white;
     z-index:2000;
-
     display:flex;
-
     flex-direction:column;
-
-    box-shadow:
-    -5px 0 25px rgba(0,0,0,.15);
-
-    transition:.3s ease;
-
+    transition:.3s;
+    box-shadow:-5px 0 20px rgba(0,0,0,.2);
 }
 
-
-.cart-modal.open{
-
+.cart.open{
     right:0;
-
 }
 
-
-.cart-header{
-
-    background:var(--green);
-
-    color:#fff;
-
-    padding:17px 20px;
-
+.cart-head{
+    background:#198754;
+    color:white;
+    padding:15px 18px;
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
+    align-items:center;
 }
 
-
-.cart-header h3{
-
-    font-size:20px;
-
-}
-
-
-.close-cart{
-
-    border:none;
-
+.close{
+    border:0;
     background:none;
-
-    color:#fff;
-
+    color:white;
     font-size:28px;
-
     cursor:pointer;
-
 }
-
 
 .cart-items{
-
     flex:1;
-
-    overflow-y:auto;
-
-    padding:18px;
-
+    overflow:auto;
+    padding:15px;
 }
 
-
-.empty-cart{
-
+.empty{
     text-align:center;
-
     color:#777;
-
-    padding:50px 15px;
-
+    padding:50px 10px;
 }
-
-
-.empty-cart i{
-
-    color:#ccc;
-
-    font-size:45px;
-
-    margin-bottom:12px;
-
-}
-
 
 .cart-item{
-
     display:flex;
-
-    gap:10px;
-
-    padding:12px 0;
-
+    justify-content:space-between;
     border-bottom:1px solid #eee;
-
+    padding:12px 0;
 }
 
-
-.cart-item-info{
-
+.item-info{
     flex:1;
-
 }
 
-
-.cart-item-info h4{
-
-    font-size:15px;
-
-}
-
-
-.cart-item-price{
-
-    color:var(--green);
-
-    font-weight:600;
-
-}
-
-
-.quantity-control{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    margin-top:7px;
-
-}
-
-
-.quantity-control button{
-
-    width:27px;
-
-    height:27px;
-
-    border:1px solid #ddd;
-
-    background:#f7f7f7;
-
-    border-radius:5px;
-
-    cursor:pointer;
-
+.item-price{
+    color:#198754;
     font-weight:bold;
-
 }
 
-
-.quantity-control span{
-
-    min-width:20px;
-
-    text-align:center;
-
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-top:6px;
 }
 
-
-.remove-item{
-
-    border:none;
-
-    background:none;
-
-    color:var(--red);
-
+.quantity button{
+    width:28px;
+    height:28px;
+    border:1px solid #ddd;
+    background:#f5f5f5;
+    border-radius:5px;
     cursor:pointer;
-
-    font-size:16px;
-
 }
 
+.remove{
+    border:0;
+    background:none;
+    color:#dc3545;
+    cursor:pointer;
+}
 
 .cart-footer{
-
-    padding:18px;
-
+    padding:16px;
     background:#fafafa;
-
-    border-top:1px solid #eee;
-
+    border-top:1px solid #ddd;
 }
 
-
-.summary-row{
-
+.row{
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
     margin-bottom:6px;
-
 }
 
-
-.total-row{
-
-    border-top:1px dashed #ccc;
-
+.total{
+    border-top:1px dashed #bbb;
     padding-top:10px;
-
-    margin-top:10px;
-
-    font-size:19px;
-
-    font-weight:700;
-
-    color:var(--dark-green);
-
+    margin-top:8px;
+    font-size:18px;
+    font-weight:bold;
+    color:#116530;
 }
 
-
-.checkout-btn{
-
+.checkout{
     width:100%;
-
-    border:none;
-
-    background:var(--green);
-
-    color:#fff;
-
+    border:0;
+    background:#198754;
+    color:white;
     padding:12px;
-
-    border-radius:8px;
-
-    margin-top:12px;
-
-    font-size:17px;
-
-    font-weight:700;
-
+    border-radius:7px;
+    margin-top:10px;
+    font-size:16px;
+    font-weight:bold;
     cursor:pointer;
-
 }
 
-
-.checkout-btn:hover{
-
-    background:var(--dark-green);
-
-}
-
-
-/* =====================================================
-   CHECKOUT MODAL
-===================================================== */
-
-.checkout-modal{
-
+.modal{
     display:none;
-
     position:fixed;
-
     inset:0;
-
-    background:
-    rgba(0,0,0,.6);
-
+    background:rgba(0,0,0,.65);
     z-index:3000;
-
     align-items:center;
-
     justify-content:center;
-
     padding:15px;
-
 }
 
-
-.checkout-modal.show{
-
+.modal.show{
     display:flex;
-
 }
 
-
-.checkout-box{
-
+.modal-box{
     width:100%;
-
     max-width:450px;
-
     max-height:92vh;
-
-    overflow-y:auto;
-
-    background:#fff;
-
-    border-radius:15px;
-
-    padding:25px;
-
+    overflow:auto;
+    background:white;
+    border-radius:14px;
+    padding:24px;
     position:relative;
-
 }
 
-
-.checkout-close{
-
-    position:absolute;
-
-    right:15px;
-
-    top:8px;
-
-    border:none;
-
-    background:none;
-
-    color:#777;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-}
-
-
-.checkout-box h3{
-
-    color:var(--dark-green);
-
-    font-size:23px;
-
+.modal-box h3{
+    color:#116530;
     margin-bottom:18px;
-
 }
 
+.modal-close{
+    position:absolute;
+    right:12px;
+    top:5px;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
 
 .form-group{
-
     margin-bottom:13px;
-
 }
-
 
 .form-group label{
-
     display:block;
-
-    margin-bottom:5px;
-
-    font-weight:600;
-
+    font-weight:bold;
+    margin-bottom:4px;
 }
-
 
 .form-group input,
 .form-group textarea,
 .form-group select{
-
     width:100%;
-
-    border:1px solid #ccc;
-
-    border-radius:7px;
-
     padding:10px;
-
+    border:1px solid #ccc;
+    border-radius:7px;
     font-size:15px;
-
-    outline:none;
-
 }
-
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus{
-
-    border-color:var(--green);
-
-}
-
 
 .form-group textarea{
-
-    min-height:85px;
-
-    resize:vertical;
-
+    min-height:80px;
 }
 
-
-.delivery-note{
-
-    background:var(--light-green);
-
+.note{
+    background:#eaf7ed;
     padding:10px;
-
-    border-radius:8px;
-
+    border-radius:7px;
     font-size:13px;
-
-    margin-bottom:12px;
-
 }
 
-
-.confirm-btn{
-
+.whatsapp{
     width:100%;
-
-    border:none;
-
-    background:#25D366;
-
-    color:#fff;
-
+    border:0;
+    background:#25d366;
+    color:white;
     padding:13px;
-
-    border-radius:8px;
-
-    font-size:17px;
-
-    font-weight:700;
-
+    border-radius:7px;
+    margin-top:10px;
+    font-size:16px;
+    font-weight:bold;
     cursor:pointer;
-
 }
 
-
-.cancel-btn{
-
+.cancel{
     width:100%;
-
-    border:none;
-
+    border:0;
     background:#eee;
-
-    color:#555;
-
     padding:10px;
-
-    border-radius:8px;
-
+    border-radius:7px;
     margin-top:7px;
-
     cursor:pointer;
-
 }
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
 
 footer{
-
     background:#123d19;
-
-    color:#fff;
-
+    color:white;
     text-align:center;
-
-    padding:
-    28px 15px 85px;
-
-    margin-top:20px;
-
+    padding:25px 15px;
 }
 
-
-.footer-logo{
-
-    font-size:24px;
-
-    font-weight:700;
-
-    margin-bottom:5px;
-
-}
-
-
-.footer-contact{
-
-    margin-top:8px;
-
-    color:#d8eadb;
-
-}
-
-
-/* =====================================================
-   MOBILE CART BAR
-===================================================== */
-
-.mobile-cart-bar{
-
+.mobile-cart{
     display:none;
-
-    position:fixed;
-
-    left:12px;
-
-    right:12px;
-
-    bottom:12px;
-
-    z-index:1500;
-
 }
-
-
-.mobile-cart-btn{
-
-    width:100%;
-
-    border:none;
-
-    background:var(--dark-green);
-
-    color:#fff;
-
-    padding:13px 18px;
-
-    border-radius:30px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.25);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
 
 @media(max-width:900px){
 
-    .product-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+    .products{
+        grid-template-columns:repeat(2,1fr);
     }
-
-
-    .trust-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-
-    .trust-item:nth-child(2){
-
-        border-right:none;
-
-    }
-
-
-    .trust-item:nth-child(-n+2){
-
-        border-bottom:
-        1px solid #eee;
-
-    }
-
 
     .hero h2{
-
         font-size:34px;
-
     }
-
 }
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
 
 @media(max-width:600px){
 
     .navbar{
-
-        padding:
-        8px 10px;
-
+        padding:8px 10px;
     }
 
-
-    .brand-logo{
-
+    .logo-area img{
         width:40px;
-
         height:40px;
-
     }
-
 
     .logo-area h1{
-
-        font-size:23px;
-
+        font-size:22px;
     }
 
-
-    .nav-actions{
-
-        gap:5px;
-
-    }
-
-
-    .language-switcher button{
-
-        padding:
-        5px 8px;
-
+    .lang button{
         font-size:11px;
-
+        padding:5px 7px;
     }
-
 
     .cart-btn{
-
-        padding:
-        8px 10px;
-
-        font-size:13px;
-
-    }
-
-
-    .cart-btn i{
-
+        padding:8px 9px;
         font-size:12px;
-
     }
-
 
     .hero{
-
-        min-height:320px;
-
-        padding:
-        40px 18px;
-
+        min-height:310px;
     }
-
 
     .hero h2{
-
-        font-size:30px;
-
+        font-size:29px;
     }
-
 
     .hero p{
-
-        font-size:16px;
-
+        font-size:15px;
     }
 
-
-    .container{
-
-        padding:
-        0 12px 35px;
-
+    .products{
+        gap:11px;
     }
 
-
-    .section-title{
-
-        font-size:26px;
-
-    }
-
-
-    .product-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-        gap:12px;
-
-    }
-
-
-    .product-img-box{
-
+    .product-image{
         height:155px;
-
     }
-
 
     .product-info{
-
-        padding:11px;
-
+        padding:10px;
     }
 
-
-    .product-title{
-
+    .product-name{
         font-size:16px;
-
     }
 
-
-    .product-description{
-
+    .product-desc{
         font-size:11px;
-
     }
-
 
     .product-bottom{
-
         display:block;
-
     }
 
-
-    .product-price{
-
+    .price{
+        margin-bottom:7px;
         font-size:18px;
-
-        margin-bottom:8px;
-
     }
 
-
-    .add-to-cart{
-
+    .add{
         width:100%;
-
-        font-size:13px;
-
-        padding:8px 5px;
-
+        font-size:12px;
     }
 
-
-    .trust-section{
-
-        margin-top:-25px;
-
-    }
-
-
-    .trust-item{
-
-        padding:
-        15px 5px;
-
-    }
-
-
-    .trust-item i{
-
-        font-size:21px;
-
-    }
-
-
-    .trust-item strong{
-
-        font-size:14px;
-
-    }
-
-
-    .trust-item span{
-
-        font-size:11px;
-
-    }
-
-
-    .mobile-cart-bar{
-
+    .mobile-cart{
         display:block;
-
+        position:fixed;
+        bottom:12px;
+        left:12px;
+        right:12px;
+        z-index:1500;
     }
 
+    .mobile-cart button{
+        width:100%;
+        border:0;
+        background:#116530;
+        color:white;
+        padding:13px;
+        border-radius:30px;
+        display:flex;
+        justify-content:space-between;
+        font-weight:bold;
+        box-shadow:0 5px 20px rgba(0,0,0,.3);
+    }
 
     footer{
-
-        padding-bottom:90px;
-
+        padding-bottom:80px;
     }
-
 }
-
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
 <header>
 
 <div class="navbar">
 
+<div class="logo-area">
 
-    <!-- LOGO -->
+<img src="logo.jpeg" alt="সরস">
 
-    <div class="logo-area">
+<h1>সরস</h1>
 
-        <img src="logo.jpeg"
-             alt="সরস Logo"
-             class="brand-logo">
+</div>
 
-        <h1>সরস</h1>
+<div class="nav-right">
 
-    </div>
+<div class="lang">
 
+<button id="bnBtn"
+class="active"
+onclick="setLanguage('bn')">
+বাংলা
+</button>
 
-    <!-- RIGHT SIDE -->
+<button id="enBtn"
+onclick="setLanguage('en')">
+English
+</button>
 
-    <div class="nav-actions">
+</div>
 
+<button class="cart-btn"
+onclick="toggleCart()">
 
-        <!-- LANGUAGE -->
+<i class="fa-solid fa-cart-shopping"></i>
 
-        <div class="language-switcher">
+<span data-text="cart">কার্ট</span>
 
-            <button
-                id="bn-btn"
-                class="active"
-                onclick="setLanguage('bn')">
+(<span id="cartCount">0</span>)
 
-                বাংলা
+</button>
 
-            </button>
-
-
-            <button
-                id="en-btn"
-                onclick="setLanguage('en')">
-
-                English
-
-            </button>
-
-        </div>
-
-
-        <!-- CART -->
-
-        <button
-            class="cart-btn"
-            onclick="toggleCart()">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span data-i18n="cart">
-                কার্ট
-            </span>
-
-            (<span id="cart-count">0</span>)
-
-        </button>
-
-    </div>
+</div>
 
 </div>
 
 </header>
 
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
+<h2 data-text="heroTitle">
+কৃষকের ফ্রেশ পণ্য
+</h2>
 
-    <h2 data-i18n="heroTitle">
+<p data-text="heroText">
+সরাসরি খামার ও কৃষকের কাছ থেকে সংগৃহীত
+তাজা ও মানসম্মত পণ্য।
+</p>
 
-        কৃষকের ফ্রেশ পণ্য
+<a href="#products">
 
-    </h2>
+<i class="fa-solid fa-basket-shopping"></i>
 
+<span data-text="orderNow">
+এখনই অর্ডার করুন
+</span>
 
-    <p data-i18n="heroText">
-
-        সরাসরি খামার ও কৃষকের কাছ থেকে সংগৃহীত
-        তাজা ও মানসম্মত পণ্য।
-
-    </p>
-
-
-    <a href="#products"
-       class="hero-btn">
-
-        <i class="fa-solid fa-basket-shopping"></i>
-
-        <span data-i18n="orderNow">
-
-            এখনই অর্ডার করুন
-
-        </span>
-
-    </a>
-
+</a>
 
 </div>
 
 </section>
 
 
+<main class="container"
+id="products">
 
-<!-- =====================================================
-     TRUST
-===================================================== -->
+<h2 class="section-title"
+data-text="productsTitle">
 
-<section class="trust-section">
+আমাদের পণ্যসমূহ
 
-<div class="trust-grid">
+</h2>
 
+<p class="section-sub"
+data-text="productsSub">
 
-    <div class="trust-item">
+আপনার প্রয়োজনের ফ্রেশ পণ্য বেছে নিন
 
-        <i class="fa-solid fa-leaf"></i>
+</p>
 
-        <strong data-i18n="fresh">
-            ফ্রেশ পণ্য
-        </strong>
-
-        <span data-i18n="freshSub">
-            তাজা ও মানসম্মত
-        </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-        <i class="fa-solid fa-tractor"></i>
-
-        <strong data-i18n="farmer">
-            কৃষকের কাছ থেকে
-        </strong>
-
-        <span data-i18n="farmerSub">
-            সরাসরি সংগ্রহ
-        </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-        <i class="fa-solid fa-truck-fast"></i>
-
-        <strong data-i18n="fastDelivery">
-            দ্রুত ডেলিভারি
-        </strong>
-
-        <span data-i18n="fastDeliverySub">
-            আপনার ঠিকানায়
-        </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-        <i class="fa-solid fa-money-bill-wave"></i>
-
-        <strong data-i18n="cod">
-            Cash on Delivery
-        </strong>
-
-        <span data-i18n="codSub">
-            পণ্য হাতে পেয়ে পেমেন্ট
-        </span>
-
-    </div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PRODUCTS
-===================================================== -->
-
-<main
-    class="container"
-    id="products">
-
-
-    <h2
-        class="section-title"
-        data-i18n="productsTitle">
-
-        আমাদের পণ্যসমূহ
-
-    </h2>
-
-
-    <p
-        class="section-subtitle"
-        data-i18n="productsSub">
-
-        আপনার প্রয়োজনের ফ্রেশ পণ্য বেছে নিন
-
-    </p>
-
-
-    <div
-        class="product-grid"
-        id="product-grid">
-
-    </div>
-
+<div class="products"
+id="productGrid"></div>
 
 </main>
 
 
+<div class="overlay"
+id="overlay"
+onclick="toggleCart()">
+</div>
 
-<!-- =====================================================
-     CART OVERLAY
-===================================================== -->
 
-<div
-    class="overlay"
-    id="cartOverlay"
-    onclick="toggleCart()">
+<div class="cart"
+id="cart">
+
+<div class="cart-head">
+
+<h3>
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span data-text="yourCart">
+আপনার কার্ট
+</span>
+
+</h3>
+
+<button class="close"
+onclick="toggleCart()">
+
+×
+</button>
 
 </div>
 
 
-
-<!-- =====================================================
-     CART
-===================================================== -->
-
-<div
-    class="cart-modal"
-    id="cartModal">
+<div class="cart-items"
+id="cartItems">
+</div>
 
 
-    <div class="cart-header">
+<div class="cart-footer">
 
-        <h3>
+<div class="row">
 
-            <i class="fa-solid fa-cart-shopping"></i>
+<span data-text="subtotal">
+পণ্যের মূল্য
+</span>
 
-            <span data-i18n="yourCart">
-                আপনার কার্ট
-            </span>
-
-        </h3>
-
-
-        <button
-            class="close-cart"
-            onclick="toggleCart()">
-
-            ×
-
-        </button>
-
-    </div>
-
-
-    <div
-        class="cart-items"
-        id="cart-items">
-
-    </div>
-
-
-    <div class="cart-footer">
-
-
-        <div class="summary-row">
-
-            <span data-i18n="productPrice">
-                পণ্যের মূল্য
-            </span>
-
-            <strong>
-                ৳ <span id="cart-subtotal">0</span>
-            </strong>
-
-        </div>
-
-
-        <div class="summary-row">
-
-            <span data-i18n="delivery">
-                ডেলিভারি
-            </span>
-
-            <strong>
-                ৳ <span id="cart-delivery">0</span>
-            </strong>
-
-        </div>
-
-
-        <div class="summary-row total-row">
-
-            <span data-i18n="grandTotal">
-                সর্বমোট
-            </span>
-
-            <strong>
-                ৳ <span id="cart-total">0</span>
-            </strong>
-
-        </div>
-
-
-        <button
-            class="checkout-btn"
-            onclick="openCheckout()">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <span data-i18n="confirmOrder">
-
-                অর্ডার কনফার্ম করুন
-
-            </span>
-
-        </button>
-
-
-    </div>
+<strong>
+৳ <span id="subtotal">0</span>
+</strong>
 
 </div>
 
 
-
-<!-- =====================================================
-     CHECKOUT MODAL
-===================================================== -->
-
-<div
-    class="checkout-modal"
-    id="checkoutModal">
-
-
-    <div class="checkout-box">
-
-
-        <button
-            class="checkout-close"
-            onclick="closeCheckout()">
-
-            ×
-
-        </button>
-
-
-        <h3>
-
-            <i class="fa-solid fa-file-invoice"></i>
-
-            <span data-i18n="orderInfo">
-
-                অর্ডারের তথ্য
-
-            </span>
-
-        </h3>
-
-
-
-        <!-- NAME -->
-
-        <div class="form-group">
-
-            <label data-i18n="name">
-
-                আপনার নাম *
-
-            </label>
-
-
-            <input
-                type="text"
-                id="customer-name"
-                data-placeholder="namePlaceholder"
-                placeholder="আপনার নাম লিখুন">
-
-        </div>
-
-
-
-        <!-- PHONE -->
-
-        <div class="form-group">
-
-            <label data-i18n="phone">
-
-                মোবাইল নম্বর *
-
-            </label>
-
-
-            <input
-                type="tel"
-                id="customer-phone"
-                data-placeholder="phonePlaceholder"
-                placeholder="01XXXXXXXXX">
-
-        </div>
-
-
-
-        <!-- DELIVERY AREA -->
-
-        <div class="form-group">
-
-            <label data-i18n="area">
-
-                ডেলিভারি এলাকা *
-
-            </label>
-
-
-            <select
-                id="delivery-area"
-                onchange="updateCart()">
-
-                <option
-                    value="dhaka"
-                    data-i18n="insideDhaka">
-
-                    ঢাকার ভিতরে — ৳60
-
-                </option>
-
-
-                <option
-                    value="outside"
-                    data-i18n="outsideDhaka">
-
-                    ঢাকার বাইরে — ৳120
-
-                </option>
-
-            </select>
-
-        </div>
-
-
-
-        <!-- ADDRESS -->
-
-        <div class="form-group">
-
-            <label data-i18n="address">
-
-                সম্পূর্ণ ঠিকানা *
-
-            </label>
-
-
-            <textarea
-                id="customer-address"
-                data-placeholder="addressPlaceholder"
-                placeholder="বাড়ি/ফ্ল্যাট, রোড, এলাকা ইত্যাদি লিখুন">
-
-            </textarea>
-
-        </div>
-
-
-
-        <!-- NOTE -->
-
-        <div class="delivery-note">
-
-            <i class="fa-solid fa-truck"></i>
-
-            <span data-i18n="deliveryNote">
-
-                ডেলিভারি চার্জ এলাকা অনুযায়ী যুক্ত হবে।
-                অর্ডার WhatsApp-এর মাধ্যমে নিশ্চিত করা হবে।
-
-            </span>
-
-        </div>
-
-
-
-        <!-- TOTAL -->
-
-        <div class="summary-row total-row">
-
-            <span data-i18n="grandTotal">
-
-                সর্বমোট
-
-            </span>
-
-
-            <strong>
-
-                ৳ <span id="checkout-total">0</span>
-
-            </strong>
-
-        </div>
-
-
-
-        <!-- WHATSAPP -->
-
-        <button
-            class="confirm-btn"
-            onclick="submitOrder()">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            <span data-i18n="whatsappOrder">
-
-                WhatsApp-এ অর্ডার পাঠান
-
-            </span>
-
-        </button>
-
-
-
-        <!-- CANCEL -->
-
-        <button
-            class="cancel-btn"
-            onclick="closeCheckout()"
-            data-i18n="cancel">
-
-            বাতিল করুন
-
-        </button>
-
-
-    </div>
+<div class="row">
+
+<span data-text="delivery">
+ডেলিভারি
+</span>
+
+<strong>
+৳ <span id="delivery">0</span>
+</strong>
 
 </div>
 
 
+<div class="row total">
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<span data-text="grand">
+সর্বমোট
+</span>
+
+<strong>
+৳ <span id="total">0</span>
+</strong>
+
+</div>
+
+
+<button class="checkout"
+onclick="openCheckout()">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span data-text="confirm">
+অর্ডার কনফার্ম করুন
+</span>
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="modal"
+id="checkoutModal">
+
+<div class="modal-box">
+
+<button class="modal-close"
+onclick="closeCheckout()">
+
+×
+
+</button>
+
+<h3>
+
+<i class="fa-solid fa-file-invoice"></i>
+
+<span data-text="orderInfo">
+অর্ডারের তথ্য
+</span>
+
+</h3>
+
+
+<div class="form-group">
+
+<label data-text="name">
+আপনার নাম *
+</label>
+
+<input
+id="customerName"
+type="text"
+placeholder="আপনার নাম লিখুন">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-text="phone">
+মোবাইল নম্বর *
+</label>
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="01XXXXXXXXX">
+
+</div>
+
+
+<div class="form-group">
+
+<label data-text="area">
+ডেলিভারি এলাকা *
+</label>
+
+<select id="deliveryArea"
+onchange="updateCart()">
+
+<option value="inside">
+ঢাকার ভিতরে — ৳60
+</option>
+
+<option value="outside">
+ঢাকার বাইরে — ৳120
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label data-text="address">
+সম্পূর্ণ ঠিকানা *
+</label>
+
+<textarea
+id="customerAddress"
+placeholder="বাড়ি/ফ্ল্যাট, রোড, এলাকা ইত্যাদি লিখুন">
+</textarea>
+
+</div>
+
+
+<div class="note">
+
+<i class="fa-solid fa-truck"></i>
+
+<span data-text="note">
+
+ডেলিভারি চার্জ এলাকা অনুযায়ী যুক্ত হবে।
+অর্ডার WhatsApp-এর মাধ্যমে নিশ্চিত করা হবে।
+
+</span>
+
+</div>
+
+
+<div class="row total">
+
+<span data-text="grand">
+সর্বমোট
+</span>
+
+<strong>
+৳ <span id="checkoutTotal">0</span>
+</strong>
+
+</div>
+
+
+<button class="whatsapp"
+onclick="sendOrder()">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<span data-text="send">
+WhatsApp-এ অর্ডার পাঠান
+</span>
+
+</button>
+
+
+<button class="cancel"
+onclick="closeCheckout()"
+data-text="cancel">
+
+বাতিল করুন
+
+</button>
+
+</div>
+
+</div>
+
 
 <footer>
 
+<h2>সরস</h2>
 
-    <div class="footer-logo">
+<p data-text="footer">
+কৃষকের ফ্রেশ পণ্য আপনার দোরগোড়ায়।
+</p>
 
-        সরস
+<p>
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp: <strong>01336530525</strong>
+</p>
 
-    </div>
-
-
-    <p data-i18n="footerText">
-
-        কৃষকের ফ্রেশ পণ্য আপনার দোরগোড়ায়।
-
-    </p>
-
-
-    <div class="footer-contact">
-
-        <i class="fa-brands fa-whatsapp"></i>
-
-        <span data-i18n="whatsapp">
-
-            WhatsApp:
-
-        </span>
-
-        <strong>
-
-            01336530525
-
-        </strong>
-
-    </div>
-
-
-    <p
-        style="
-        margin-top:10px;
-        font-size:13px;
-        color:#b8d5bd;
-        "
-        data-i18n="copyright">
-
-        © ২০২৬ সরস - সর্বস্বত্ব সংরক্ষিত
-
-    </p>
-
+<small>
+© 2026 সরস -
+<span data-text="rights">
+সর্বস্বত্ব সংরক্ষিত
+</span>
+</small>
 
 </footer>
 
 
+<div class="mobile-cart">
 
-<!-- =====================================================
-     MOBILE CART
-===================================================== -->
+<button onclick="toggleCart()">
 
-<div class="mobile-cart-bar">
+<span>
 
+<i class="fa-solid fa-cart-shopping"></i>
 
-    <button
-        class="mobile-cart-btn"
-        onclick="toggleCart()">
+<span data-text="cart">
+কার্ট
+</span>
 
+(<span id="mobileCount">0</span>)
 
-        <span>
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span data-i18n="cartItems">
-
-                কার্টে
-
-            </span>
-
-            <span id="mobile-count">
-                0
-            </span>
-
-            <span data-i18n="items">
-
-                টি পণ্য
-
-            </span>
-
-        </span>
+</span>
 
 
-        <span>
+<span>
 
-            ৳ <span id="mobile-total">
-                0
-            </span>
+৳ <span id="mobileTotal">0</span>
 
-        </span>
+</span>
 
-
-    </button>
+</button>
 
 </div>
 
 
-
 <script>
 
-/* =====================================================
-   LANGUAGE DATA
-===================================================== */
+const languageData = {
 
-const translations = {
+bn:{
 
-    bn: {
+cart:"কার্ট",
 
-        cart:"কার্ট",
+heroTitle:"কৃষকের ফ্রেশ পণ্য",
 
-        heroTitle:
-        "কৃষকের ফ্রেশ পণ্য",
+heroText:
+"সরাসরি খামার ও কৃষকের কাছ থেকে সংগৃহীত তাজা ও মানসম্মত পণ্য।",
 
-        heroText:
-        "সরাসরি খামার ও কৃষকের কাছ থেকে সংগৃহীত তাজা ও মানসম্মত পণ্য।",
+orderNow:"এখনই অর্ডার করুন",
 
-        orderNow:
-        "এখনই অর্ডার করুন",
+productsTitle:"আমাদের পণ্যসমূহ",
 
+productsSub:
+"আপনার প্রয়োজনের ফ্রেশ পণ্য বেছে নিন",
 
-        fresh:
-        "ফ্রেশ পণ্য",
+yourCart:"আপনার কার্ট",
 
-        freshSub:
-        "তাজা ও মানসম্মত",
+subtotal:"পণ্যের মূল্য",
 
+delivery:"ডেলিভারি",
 
-        farmer:
-        "কৃষকের কাছ থেকে",
+grand:"সর্বমোট",
 
-        farmerSub:
-        "সরাসরি সংগ্রহ",
+confirm:"অর্ডার কনফার্ম করুন",
 
+orderInfo:"অর্ডারের তথ্য",
 
-        fastDelivery:
-        "দ্রুত ডেলিভারি",
+name:"আপনার নাম *",
 
-        fastDeliverySub:
-        "আপনার ঠিকানায়",
+phone:"মোবাইল নম্বর *",
 
+area:"ডেলিভারি এলাকা *",
 
-        cod:
-        "Cash on Delivery",
+address:"সম্পূর্ণ ঠিকানা *",
 
-        codSub:
-        "পণ্য হাতে পেয়ে পেমেন্ট",
+note:
+"ডেলিভারি চার্জ এলাকা অনুযায়ী যুক্ত হবে। অর্ডার WhatsApp-এর মাধ্যমে নিশ্চিত করা হবে।",
 
+send:"WhatsApp-এ অর্ডার পাঠান",
 
-        productsTitle:
-        "আমাদের পণ্যসমূহ",
+cancel:"বাতিল করুন",
 
-        productsSub:
-        "আপনার প্রয়োজনের ফ্রেশ পণ্য বেছে নিন",
+footer:
+"কৃষকের ফ্রেশ পণ্য আপনার দোরগোড়ায়।",
 
+rights:"সর্বস্বত্ব সংরক্ষিত",
 
-        yourCart:
-        "আপনার কার্ট",
+add:"কার্টে যোগ করুন",
 
-        productPrice:
-        "পণ্যের মূল্য",
+fresh:"ফ্রেশ",
 
-        delivery:
-        "ডেলিভারি",
+empty:"আপনার কার্ট খালি রয়েছে।",
 
-        grandTotal:
-        "সর্বমোট",
+alertEmpty:"আপনার কার্ট খালি!",
 
-        confirmOrder:
-        "অর্ডার কনফার্ম করুন",
+alertForm:
+"দয়া করে নাম, মোবাইল নম্বর ও সম্পূর্ণ ঠিকানা দিন।",
 
+alertPhone:
+"সঠিক মোবাইল নম্বর দিন।"
 
-        orderInfo:
-        "অর্ডারের তথ্য",
+},
 
-        name:
-        "আপনার নাম *",
+en:{
 
-        phone:
-        "মোবাইল নম্বর *",
+cart:"Cart",
 
-        area:
-        "ডেলিভারি এলাকা *",
+heroTitle:
+"Fresh Products from Farmers",
 
-        address:
-        "সম্পূর্ণ ঠিকানা *",
+heroText:
+"Fresh and quality products collected directly from farms and farmers.",
 
+orderNow:"Order Now",
 
-        namePlaceholder:
-        "আপনার নাম লিখুন",
+productsTitle:"Our Products",
 
-        phonePlaceholder:
-        "01XXXXXXXXX",
+productsSub:
+"Choose fresh products for your needs",
 
-        addressPlaceholder:
-        "বাড়ি/ফ্ল্যাট, রোড, এলাকা ইত্যাদি লিখুন",
+yourCart:"Your Cart",
 
+subtotal:"Product Price",
 
-        insideDhaka:
-        "ঢাকার ভিতরে — ৳60",
+delivery:"Delivery",
 
-        outsideDhaka:
-        "ঢাকার বাইরে — ৳120",
+grand:"Grand Total",
 
+confirm:"Confirm Order",
 
-        deliveryNote:
-        "ডেলিভারি চার্জ এলাকা অনুযায়ী যুক্ত হবে। অর্ডার WhatsApp-এর মাধ্যমে নিশ্চিত করা হবে।",
+orderInfo:"Order Information",
 
+name:"Your Name *",
 
-        whatsappOrder:
-        "WhatsApp-এ অর্ডার পাঠান",
+phone:"Mobile Number *",
 
-        cancel:
-        "বাতিল করুন",
+area:"Delivery Area *",
 
+address:"Full Address *",
 
-        footerText:
-        "কৃষকের ফ্রেশ পণ্য আপনার দোরগোড়ায়।",
+note:
+"Delivery charge will be added according to your area. Your order will be confirmed through WhatsApp.",
 
-        whatsapp:
-        "WhatsApp:",
+send:"Send Order via WhatsApp",
 
-        copyright:
-        "© ২০২৬ সরস - সর্বস্বত্ব সংরক্ষিত",
+cancel:"Cancel",
 
+footer:
+"Fresh products from farmers, delivered to your doorstep.",
 
-        cartItems:
-        "কার্টে",
+rights:"All Rights Reserved",
 
-        items:
-        "টি পণ্য",
+add:"Add to Cart",
 
+fresh:"Fresh",
 
-        freshBadge:
-        "ফ্রেশ",
+empty:"Your cart is empty.",
 
-        addCart:
-        "যোগ করুন",
+alertEmpty:"Your cart is empty!",
 
-        unit:
-        "/ প্যাক/ইউনিট",
+alertForm:
+"Please enter your name, mobile number and full address.",
 
+alertPhone:
+"Please enter a valid mobile number."
 
-        emptyCart:
-        "আপনার কার্ট খালি রয়েছে।",
-
-
-        alertEmpty:
-        "আপনার কার্ট খালি!",
-
-        alertForm:
-        "দয়া করে নাম, মোবাইল নম্বর ও সম্পূর্ণ ঠিকানা দিন।",
-
-        alertPhone:
-        "সঠিক মোবাইল নম্বর দিন।",
-
-
-        orderTitle:
-        "সরস - নতুন অর্ডার",
-
-        orderName:
-        "নাম",
-
-        orderPhone:
-        "মোবাইল",
-
-        orderDelivery:
-        "ডেলিভারি",
-
-        orderAddress:
-        "ঠিকানা",
-
-        orderProducts:
-        "পণ্যের তালিকা",
-
-        orderSubtotal:
-        "পণ্যের মূল্য",
-
-        orderDeliveryCharge:
-        "ডেলিভারি চার্জ",
-
-        orderTotal:
-        "সর্বমোট",
-
-        inside:
-        "ঢাকার ভিতরে",
-
-        outside:
-        "ঢাকার বাইরে",
-
-        thanks:
-        "ধন্যবাদ ❤️\nসরস - কৃষকের ফ্রেশ পণ্য"
-
-    },
-
-
-    en: {
-
-        cart:
-        "Cart",
-
-        heroTitle:
-        "Fresh Products from Farmers",
-
-        heroText:
-        "Fresh and quality products collected directly from farms and farmers.",
-
-        orderNow:
-        "Order Now",
-
-
-        fresh:
-        "Fresh Products",
-
-        freshSub:
-        "Fresh & Quality",
-
-
-        farmer:
-        "From Farmers",
-
-        farmerSub:
-        "Directly Sourced",
-
-
-        fastDelivery:
-        "Fast Delivery",
-
-        fastDeliverySub:
-        "To Your Door",
-
-
-        cod:
-        "Cash on Delivery",
-
-        codSub:
-        "Pay After Delivery",
-
-
-        productsTitle:
-        "Our Products",
-
-        productsSub:
-        "Choose fresh products for your needs",
-
-
-        yourCart:
-        "Your Cart",
-
-        productPrice:
-        "Product Price",
-
-        delivery:
-        "Delivery",
-
-        grandTotal:
-        "Grand Total",
-
-        confirmOrder:
-        "Confirm Order",
-
-
-        orderInfo:
-        "Order Information",
-
-        name:
-        "Your Name *",
-
-        phone:
-        "Mobile Number *",
-
-        area:
-        "Delivery Area *",
-
-        address:
-        "Full Address *",
-
-
-        namePlaceholder:
-        "Enter your name",
-
-        phonePlaceholder:
-        "01XXXXXXXXX",
-
-        addressPlaceholder:
-        "House/Flat, Road, Area etc.",
-
-
-        insideDhaka:
-        "Inside Dhaka — ৳60",
-
-        outsideDhaka:
-        "Outside Dhaka — ৳120",
-
-
-        deliveryNote:
-        "Delivery charge will be added according to your area. Your order will be confirmed through WhatsApp.",
-
-
-        whatsappOrder:
-        "Send Order via WhatsApp",
-
-        cancel:
-        "Cancel",
-
-
-        footerText:
-        "Fresh products from farmers, delivered to your doorstep.",
-
-        whatsapp:
-        "WhatsApp:",
-
-        copyright:
-        "© 2026 Soros - All Rights Reserved",
-
-
-        cartItems:
-        "Cart",
-
-        items:
-        "items",
-
-
-        freshBadge:
-        "Fresh",
-
-        addCart:
-        "Add to Cart",
-
-        unit:
-        "/ pack/unit",
-
-
-        emptyCart:
-        "Your cart is empty.",
-
-
-        alertEmpty:
-        "Your cart is empty!",
-
-        alertForm:
-        "Please enter your name, mobile number and full address.",
-
-        alertPhone:
-        "Please enter a valid mobile number.",
-
-
-        orderTitle:
-        "Soros - New Order",
-
-        orderName:
-        "Name",
-
-        orderPhone:
-        "Mobile",
-
-        orderDelivery:
-        "Delivery",
-
-        orderAddress:
-        "Address",
-
-        orderProducts:
-        "Product List",
-
-        orderSubtotal:
-        "Product Price",
-
-        orderDeliveryCharge:
-        "Delivery Charge",
-
-        orderTotal:
-        "Grand Total",
-
-        inside:
-        "Inside Dhaka",
-
-        outside:
-        "Outside Dhaka",
-
-        thanks:
-        "Thank you ❤️\nSoros - Fresh Products from Farmers"
-
-    }
+}
 
 };
 
 
+const products=[
 
-/* =====================================================
-   PRODUCTS
-===================================================== */
+{
+id:1,
+bn:"ব্রাউন সুগার",
+en:"Brown Sugar",
+price:150,
+img:"01.jpg",
+descBn:"খাঁটি ও মানসম্মত ব্রাউন সুগার",
+descEn:"Pure and quality brown sugar"
+},
 
-const products = [
+{
+id:2,
+bn:"খাঁটি গরুর দুধ",
+en:"Pure Cow Milk",
+price:120,
+img:"004.jpg",
+descBn:"তাজা খাঁটি গরুর দুধ",
+descEn:"Fresh pure cow milk"
+},
 
-    {
-        id:1,
+{
+id:3,
+bn:"দেশি মুরগির ডিম",
+en:"Local Chicken Eggs",
+price:70,
+img:"02.png",
+descBn:"দেশি মুরগির ফ্রেশ ডিম",
+descEn:"Fresh local chicken eggs"
+},
 
-        nameBn:
-        "ব্রাউন সুগার",
-
-        nameEn:
-        "Brown Sugar",
-
-        price:150,
-
-        img:
-        "01.jpg",
-
-        descBn:
-        "খাঁটি ও মানসম্মত ব্রাউন সুগার",
-
-        descEn:
-        "Pure and quality brown sugar"
-    },
-
-
-    {
-        id:2,
-
-        nameBn:
-        "খাঁটি গরুর দুধ",
-
-        nameEn:
-        "Pure Cow Milk",
-
-        price:120,
-
-        img:
-        "004.jpg",
-
-        descBn:
-        "তাজা খাঁটি গরুর দুধ",
-
-        descEn:
-        "Fresh pure cow milk"
-    },
-
-
-    {
-        id:3,
-
-        nameBn:
-        "দেশি মুরগির ডিম",
-
-        nameEn:
-        "Local Chicken Eggs",
-
-        price:70,
-
-        img:
-        "02.png",
-
-        descBn:
-        "দেশি মুরগির ফ্রেশ ডিম",
-
-        descEn:
-        "Fresh local chicken eggs"
-    },
-
-
-    {
-        id:4,
-
-        nameBn:
-        "দেশি মুরগি",
-
-        nameEn:
-        "Local Chicken",
-
-        price:650,
-
-        img:
-        "03.jpeg",
-
-        descBn:
-        "ফ্রেশ দেশি মুরগি",
-
-        descEn:
-        "Fresh local chicken"
-    }
+{
+id:4,
+bn:"দেশি মুরগি",
+en:"Local Chicken",
+price:650,
+img:"03.jpeg",
+descBn:"ফ্রেশ দেশি মুরগি",
+descEn:"Fresh local chicken"
+}
 
 ];
 
 
-
-/* =====================================================
-   CART
-===================================================== */
-
-let cart = [];
-
-
-
-/* =====================================================
-   CURRENT LANGUAGE
-===================================================== */
-
 let currentLanguage =
-    localStorage.getItem("sorosLanguage") || "bn";
+localStorage.getItem("sorosLanguage") || "bn";
+
+let cart=[];
 
 
+function text(key){
 
-/* =====================================================
-   TRANSLATION FUNCTION
-===================================================== */
-
-function t(key){
-
-    return translations[currentLanguage][key] || key;
+return languageData[currentLanguage][key] || key;
 
 }
 
 
+function productName(product){
 
-/* =====================================================
-   PRODUCT NAME
-===================================================== */
-
-function getProductName(product){
-
-    if(currentLanguage === "en"){
-
-        return product.nameEn;
-
-    }
-
-    return product.nameBn;
+return currentLanguage==="bn"
+? product.bn
+: product.en;
 
 }
 
 
+function productDesc(product){
 
-/* =====================================================
-   PRODUCT DESCRIPTION
-===================================================== */
-
-function getProductDescription(product){
-
-    if(currentLanguage === "en"){
-
-        return product.descEn;
-
-    }
-
-    return product.descBn;
+return currentLanguage==="bn"
+? product.descBn
+: product.descEn;
 
 }
 
-
-
-/* =====================================================
-   LANGUAGE SWITCH
-===================================================== */
 
 function setLanguage(language){
 
-    currentLanguage = language;
+currentLanguage=language;
+
+localStorage.setItem(
+"sorosLanguage",
+language
+);
 
 
-    /* Save language */
-
-    localStorage.setItem(
-        "sorosLanguage",
-        language
-    );
-
-
-    /* HTML language */
-
-    document.documentElement.lang =
-        language === "bn"
-        ? "bn"
-        : "en";
+document
+.getElementById("bnBtn")
+.classList
+.toggle(
+"active",
+language==="bn"
+);
 
 
-    /* Active button */
-
-    document
-        .getElementById("bn-btn")
-        .classList
-        .toggle(
-            "active",
-            language === "bn"
-        );
+document
+.getElementById("enBtn")
+.classList
+.toggle(
+"active",
+language==="en"
+);
 
 
-    document
-        .getElementById("en-btn")
-        .classList
-        .toggle(
-            "active",
-            language === "en"
-        );
+document
+.querySelectorAll("[data-text]")
+.forEach(function(element){
+
+const key=
+element.getAttribute("data-text");
+
+element.textContent=
+text(key);
+
+});
 
 
-    /* Translate elements */
-
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(function(element){
-
-            const key =
-                element.getAttribute(
-                    "data-i18n"
-                );
+document.getElementById("deliveryArea").options[0].textContent=
+language==="bn"
+?"ঢাকার ভিতরে — ৳60"
+:"Inside Dhaka — ৳60";
 
 
-            if(translations[language][key]){
-
-                element.textContent =
-                    translations[language][key];
-
-            }
-
-        });
+document.getElementById("deliveryArea").options[1].textContent=
+language==="bn"
+?"ঢাকার বাইরে — ৳120"
+:"Outside Dhaka — ৳120";
 
 
-    /* Translate placeholders */
-
-    document
-        .querySelectorAll("[data-placeholder]")
-        .forEach(function(element){
-
-            const key =
-                element.getAttribute(
-                    "data-placeholder"
-                );
+document.getElementById("customerName").placeholder=
+language==="bn"
+?"আপনার নাম লিখুন"
+:"Enter your name";
 
 
-            if(translations[language][key]){
-
-                element.placeholder =
-                    translations[language][key];
-
-            }
-
-        });
+document.getElementById("customerAddress").placeholder=
+language==="bn"
+?"বাড়ি/ফ্ল্যাট, রোড, এলাকা ইত্যাদি লিখুন"
+:"House/Flat, Road, Area etc.";
 
 
-    /* Translate select options */
-
-    document
-        .querySelectorAll(
-            "#delivery-area option[data-i18n]"
-        )
-        .forEach(function(option){
-
-            const key =
-                option.getAttribute(
-                    "data-i18n"
-                );
+document.documentElement.lang=language;
 
 
-            option.textContent =
-                translations[language][key];
+renderProducts();
 
-        });
-
-
-    /* Page title */
-
-    document.title =
-        language === "bn"
-        ? "সরস - কৃষকের ফ্রেশ পণ্য"
-        : "Soros - Fresh Products from Farmers";
-
-
-    /* Reload products */
-
-    loadProducts();
-
-
-    /* Update cart */
-
-    updateCart();
+updateCart();
 
 }
 
 
+function renderProducts(){
 
-/* =====================================================
-   LOAD PRODUCTS
-===================================================== */
-
-function loadProducts(){
-
-    const grid =
-        document.getElementById(
-            "product-grid"
-        );
+const grid=
+document.getElementById(
+"productGrid"
+);
 
 
-    grid.innerHTML =
-        products.map(function(product){
+grid.innerHTML=
+products.map(function(product){
 
-            const name =
-                getProductName(product);
+return `
 
-            const description =
-                getProductDescription(product);
+<div class="product">
 
+<div class="product-image">
 
-            return `
+<span class="badge">
+${text("fresh")}
+</span>
 
-                <div class="product-card">
+<img
+src="${product.img}"
+alt="${productName(product)}"
+>
 
-                    <div class="product-img-box">
+</div>
 
-                        <span class="product-badge">
+<div class="product-info">
 
-                            ${t("freshBadge")}
+<div class="product-name">
+${productName(product)}
+</div>
 
-                        </span>
+<div class="product-desc">
+${productDesc(product)}
+</div>
 
+<div class="product-bottom">
 
-                        <img
-                            src="${product.img}"
-                            alt="${name}"
-                            class="product-img"
-                            loading="lazy"
-                        >
+<div class="price">
+৳ ${product.price}
+</div>
 
-                    </div>
+<button
+class="add"
+onclick="addToCart(${product.id})">
 
+<i class="fa-solid fa-cart-plus"></i>
 
-                    <div class="product-info">
+${text("add")}
 
+</button>
 
-                        <div class="product-title">
+</div>
 
-                            ${name}
+</div>
 
-                        </div>
+</div>
 
+`;
 
-                        <div class="product-description">
-
-                            ${description}
-
-                        </div>
-
-
-                        <div class="product-bottom">
-
-
-                            <div class="product-price">
-
-                                ৳ ${product.price}
-
-                                <span class="price-unit">
-
-                                    ${t("unit")}
-
-                                </span>
-
-                            </div>
-
-
-                            <button
-                                class="add-to-cart"
-                                onclick="addToCart(${product.id})">
-
-                                <i class="fa-solid fa-cart-plus"></i>
-
-                                ${t("addCart")}
-
-                            </button>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            `;
-
-        }).join("");
+}).join("");
 
 }
 
 
+function addToCart(id){
 
-/* =====================================================
-   DELIVERY CHARGE
-===================================================== */
+const product=
+products.find(
+item=>item.id===id
+);
+
+if(!product)return;
+
+
+const existing=
+cart.find(
+item=>item.id===id
+);
+
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+...product,
+quantity:1
+});
+
+}
+
+
+updateCart();
+
+}
+
+
+function changeQuantity(id,value){
+
+const item=
+cart.find(
+product=>product.id===id
+);
+
+if(!item)return;
+
+
+item.quantity+=value;
+
+
+if(item.quantity<=0){
+
+cart=
+cart.filter(
+product=>product.id!==id
+);
+
+}
+
+
+updateCart();
+
+}
+
+
+function removeFromCart(id){
+
+cart=
+cart.filter(
+item=>item.id!==id
+);
+
+updateCart();
+
+}
+
 
 function getDeliveryCharge(){
 
-    const area =
-        document.getElementById(
-            "delivery-area"
-        );
+if(!cart.length)return 0;
 
 
-    if(!area){
-
-        return 60;
-
-    }
-
-
-    return area.value === "outside"
-        ? 120
-        : 60;
+return document
+.getElementById("deliveryArea")
+.value==="outside"
+?120
+:60;
 
 }
 
-
-
-/* =====================================================
-   ADD TO CART
-===================================================== */
-
-function addToCart(productId){
-
-    const product =
-        products.find(function(item){
-
-            return item.id === productId;
-
-        });
-
-
-    if(!product){
-
-        return;
-
-    }
-
-
-    const existing =
-        cart.find(function(item){
-
-            return item.id === productId;
-
-        });
-
-
-    if(existing){
-
-        existing.quantity += 1;
-
-    }
-
-    else{
-
-        cart.push({
-
-            ...product,
-
-            quantity:1
-
-        });
-
-    }
-
-
-    updateCart();
-
-}
-
-
-
-/* =====================================================
-   CHANGE QUANTITY
-===================================================== */
-
-function changeQuantity(
-    productId,
-    change
-){
-
-    const item =
-        cart.find(function(product){
-
-            return product.id === productId;
-
-        });
-
-
-    if(!item){
-
-        return;
-
-    }
-
-
-    item.quantity += change;
-
-
-    if(item.quantity <= 0){
-
-        cart =
-            cart.filter(function(product){
-
-                return product.id !== productId;
-
-            });
-
-    }
-
-
-    updateCart();
-
-}
-
-
-
-/* =====================================================
-   REMOVE PRODUCT
-===================================================== */
-
-function removeFromCart(productId){
-
-    cart =
-        cart.filter(function(item){
-
-            return item.id !== productId;
-
-        });
-
-
-    updateCart();
-
-}
-
-
-
-/* =====================================================
-   UPDATE CART
-===================================================== */
 
 function updateCart(){
 
-    const cartItems =
-        document.getElementById(
-            "cart-items"
-        );
+const container=
+document.getElementById(
+"cartItems"
+);
 
 
-    let count = 0;
+let count=0;
 
-    let subtotal = 0;
+let subtotal=0;
 
 
-    cart.forEach(function(item){
+cart.forEach(function(item){
 
-        count += item.quantity;
+count+=item.quantity;
 
-        subtotal +=
-            item.price * item.quantity;
+subtotal+=
+item.price*
+item.quantity;
 
-    });
+});
 
 
-    /* Empty cart */
+if(cart.length===0){
 
-    if(cart.length === 0){
+container.innerHTML=`
 
-        cartItems.innerHTML = `
+<div class="empty">
 
-            <div class="empty-cart">
+<i class="fa-solid fa-cart-shopping"></i>
 
-                <i class="fa-solid fa-cart-shopping"></i>
+<p>
+${text("empty")}
+</p>
 
-                <p>
+</div>
 
-                    ${t("emptyCart")}
+`;
 
-                </p>
+}else{
 
-            </div>
+container.innerHTML=
+cart.map(function(item){
 
-        `;
+return `
 
-    }
+<div class="cart-item">
 
-    else{
+<div class="item-info">
 
-        cartItems.innerHTML =
-            cart.map(function(item){
+<strong>
+${productName(item)}
+</strong>
 
-                return `
+<div class="item-price">
 
-                    <div class="cart-item">
+৳ ${item.price}
+×
+${item.quantity}
 
+</div>
 
-                        <div class="cart-item-info">
+<div class="quantity">
 
+<button
+onclick="changeQuantity(${item.id},-1)">
+−
+</button>
 
-                            <h4>
+<span>
+${item.quantity}
+</span>
 
-                                ${getProductName(item)}
+<button
+onclick="changeQuantity(${item.id},1)">
++
+</button>
 
-                            </h4>
+</div>
 
+</div>
 
-                            <div class="cart-item-price">
+<button
+class="remove"
+onclick="removeFromCart(${item.id})">
 
-                                ৳ ${item.price}
-                                ×
-                                ${item.quantity}
+<i class="fa-solid fa-trash"></i>
 
-                            </div>
+</button>
 
+</div>
 
-                            <div class="quantity-control">
+`;
 
-
-                                <button
-                                    onclick="changeQuantity(${item.id}, -1)">
-
-                                    −
-
-                                </button>
-
-
-                                <span>
-
-                                    ${item.quantity}
-
-                                </span>
-
-
-                                <button
-                                    onclick="changeQuantity(${item.id}, 1)">
-
-                                    +
-
-                                </button>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <button
-                            class="remove-item"
-                            onclick="removeFromCart(${item.id})">
-
-                            <i class="fa-solid fa-trash"></i>
-
-                        </button>
-
-
-                    </div>
-
-                `;
-
-            }).join("");
-
-    }
-
-
-    /* Delivery */
-
-    const delivery =
-        cart.length > 0
-        ? getDeliveryCharge()
-        : 0;
-
-
-    /* Total */
-
-    const total =
-        subtotal + delivery;
-
-
-    /* Update UI */
-
-    document.getElementById(
-        "cart-count"
-    ).textContent = count;
-
-
-    document.getElementById(
-        "mobile-count"
-    ).textContent = count;
-
-
-    document.getElementById(
-        "cart-subtotal"
-    ).textContent = subtotal;
-
-
-    document.getElementById(
-        "cart-delivery"
-    ).textContent = delivery;
-
-
-    document.getElementById(
-        "cart-total"
-    ).textContent = total;
-
-
-    document.getElementById(
-        "mobile-total"
-    ).textContent = total;
-
-
-    document.getElementById(
-        "checkout-total"
-    ).textContent = total;
+}).join("");
 
 }
 
 
+const delivery=
+getDeliveryCharge();
 
-/* =====================================================
-   OPEN / CLOSE CART
-===================================================== */
+const total=
+subtotal+delivery;
+
+
+document.getElementById(
+"cartCount"
+).textContent=count;
+
+
+document.getElementById(
+"mobileCount"
+).textContent=count;
+
+
+document.getElementById(
+"subtotal"
+).textContent=subtotal;
+
+
+document.getElementById(
+"delivery"
+).textContent=delivery;
+
+
+document.getElementById(
+"total"
+).textContent=total;
+
+
+document.getElementById(
+"mobileTotal"
+).textContent=total;
+
+
+document.getElementById(
+"checkoutTotal"
+).textContent=total;
+
+}
+
 
 function toggleCart(){
 
-    const cartModal =
-        document.getElementById(
-            "cartModal"
-        );
+document
+.getElementById("cart")
+.classList
+.toggle("open");
 
 
-    const overlay =
-        document.getElementById(
-            "cartOverlay"
-        );
-
-
-    cartModal.classList.toggle(
-        "open"
-    );
-
-
-    overlay.classList.toggle(
-        "show"
-    );
+document
+.getElementById("overlay")
+.classList
+.toggle("show");
 
 }
 
-
-
-/* =====================================================
-   OPEN CHECKOUT
-===================================================== */
 
 function openCheckout(){
 
-    if(cart.length === 0){
+if(cart.length===0){
 
-        alert(
-            t("alertEmpty")
-        );
+alert(
+text("alertEmpty")
+);
 
-        return;
-
-    }
-
-
-    document
-        .getElementById(
-            "checkoutModal"
-        )
-        .classList
-        .add("show");
-
-
-    updateCart();
+return;
 
 }
 
 
+document
+.getElementById("checkoutModal")
+.classList
+.add("show");
 
-/* =====================================================
-   CLOSE CHECKOUT
-===================================================== */
+
+updateCart();
+
+}
+
 
 function closeCheckout(){
 
-    document
-        .getElementById(
-            "checkoutModal"
-        )
-        .classList
-        .remove("show");
+document
+.getElementById("checkoutModal")
+.classList
+.remove("show");
 
 }
 
 
+function sendOrder(){
 
-/* =====================================================
-   SUBMIT WHATSAPP ORDER
-===================================================== */
-
-function submitOrder(){
-
-    const name =
-        document
-        .getElementById(
-            "customer-name"
-        )
-        .value
-        .trim();
+const name=
+document
+.getElementById("customerName")
+.value
+.trim();
 
 
-    const phone =
-        document
-        .getElementById(
-            "customer-phone"
-        )
-        .value
-        .trim();
+const phone=
+document
+.getElementById("customerPhone")
+.value
+.trim();
 
 
-    const address =
-        document
-        .getElementById(
-            "customer-address"
-        )
-        .value
-        .trim();
+const address=
+document
+.getElementById("customerAddress")
+.value
+.trim();
 
 
-    const area =
-        document
-        .getElementById(
-            "delivery-area"
-        )
-        .value;
+const area=
+document
+.getElementById("deliveryArea")
+.value;
 
 
-    /* Validation */
+if(
+!name ||
+!phone ||
+!address
+){
 
-    if(
-        !name ||
-        !phone ||
-        !address
-    ){
+alert(
+text("alertForm")
+);
 
-        alert(
-            t("alertForm")
-        );
+return;
 
-        return;
-
-    }
+}
 
 
-    /* Phone validation */
+if(
+phone.replace(/\D/g,"").length<10
+){
 
-    const cleanPhone =
-        phone.replace(
-            /\D/g,
-            ""
-        );
+alert(
+text("alertPhone")
+);
 
+return;
 
-    if(cleanPhone.length < 10){
-
-        alert(
-            t("alertPhone")
-        );
-
-        return;
-
-    }
+}
 
 
-    /* Product list */
+let subtotal=0;
 
-    let subtotal = 0;
-
-    let productText = "";
+let productList="";
 
 
-    cart.forEach(function(item){
+cart.forEach(function(item){
 
-        const itemTotal =
-            item.price *
-            item.quantity;
-
-
-        subtotal += itemTotal;
+const itemTotal=
+item.price*
+item.quantity;
 
 
-        productText +=
-
-            `• ${getProductName(item)} — ${item.quantity} x ৳${item.price} = ৳${itemTotal}\n`;
-
-    });
+subtotal+=itemTotal;
 
 
-    /* Delivery */
+productList+=
+`• ${productName(item)} — ${item.quantity} × ৳${item.price} = ৳${itemTotal}\n`;
 
-    const delivery =
-        area === "outside"
-        ? 120
-        : 60;
+});
 
 
-    const areaText =
-        area === "outside"
-        ? t("outside")
-        : t("inside");
+const delivery=
+area==="outside"
+?120
+:60;
 
 
-    /* Grand total */
-
-    const total =
-        subtotal + delivery;
+const total=
+subtotal+delivery;
 
 
-    /* WhatsApp message */
+const areaName=
+currentLanguage==="bn"
+?(
+area==="outside"
+?"ঢাকার বাইরে"
+:"ঢাকার ভিতরে"
+)
+:(
+area==="outside"
+?"Outside Dhaka"
+:"Inside Dhaka"
+);
 
-    const message =
 
-`🌿 *${t("orderTitle")}* 🌿
+const message=
 
-👤 *${t("orderName")}:* ${name}
+`🌿 সরস - নতুন অর্ডার 🌿
 
-📱 *${t("orderPhone")}:* ${phone}
+👤 ${currentLanguage==="bn"?"নাম":"Name"}: ${name}
 
-📍 *${t("orderDelivery")}:* ${areaText}
+📱 ${currentLanguage==="bn"?"মোবাইল":"Mobile"}: ${phone}
 
-🏠 *${t("orderAddress")}:*
+📍 ${currentLanguage==="bn"?"ডেলিভারি":"Delivery"}: ${areaName}
+
+🏠 ${currentLanguage==="bn"?"ঠিকানা":"Address"}:
 ${address}
 
-🛒 *${t("orderProducts")}:*
+🛒 ${currentLanguage==="bn"?"পণ্যের তালিকা":"Product List"}:
 
-${productText}
+${productList}
 
-━━━━━━━━━━━━━━
+━━━━━━━━━━━━
 
-🧾 *${t("orderSubtotal")}:* ৳${subtotal}
+🧾 ${currentLanguage==="bn"?"পণ্যের মূল্য":"Product Price"}: ৳${subtotal}
 
-🚚 *${t("orderDeliveryCharge")}:* ৳${delivery}
+🚚 ${currentLanguage==="bn"?"ডেলিভারি চার্জ":"Delivery Charge"}: ৳${delivery}
 
-💰 *${t("orderTotal")}:* ৳${total}
+💰 ${currentLanguage==="bn"?"সর্বমোট":"Grand Total"}: ৳${total}
 
-━━━━━━━━━━━━━━
+━━━━━━━━━━━━
 
-${t("thanks")}`;
-
-
-    /* WhatsApp number */
-
-    const whatsappNumber =
-        "8801336530525";
+${currentLanguage==="bn"
+?"ধন্যবাদ ❤️"
+:"Thank you ❤️"}`;
 
 
-    /* WhatsApp URL */
-
-    const whatsappURL =
-        "https://wa.me/"
-        + whatsappNumber
-        + "?text="
-        + encodeURIComponent(
-            message
-        );
+const whatsappNumber=
+"8801336530525";
 
 
-    /* Open WhatsApp */
+const whatsappURL=
+"https://wa.me/"
++
+whatsappNumber
++
+"?text="
++
+encodeURIComponent(message);
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+
+window.open(
+whatsappURL,
+"_blank"
+);
 
 }
 
 
-
-/* =====================================================
-   CLOSE CHECKOUT WHEN CLICK OUTSIDE
-===================================================== */
-
-document
-    .getElementById(
-        "checkoutModal"
-    )
-    .addEventListener(
-        "click",
-        function(event){
-
-            if(
-                event.target === this
-            ){
-
-                closeCheckout();
-
-            }
-
-        }
-    );
-
-
-
-/* =====================================================
-   INITIAL LOAD
-===================================================== */
-
 setLanguage(
-    currentLanguage
+currentLanguage
 );
 
 </script>
 
-
 </body>
-
 </html>
-```
